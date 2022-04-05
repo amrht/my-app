@@ -19,7 +19,7 @@ const Page = () => {
           <br/>
           <br/>
           <div class="inline-flex w-full">
-          <img class='h-24 w-24 ml-12'/>
+          <img class='h-24 w-24 ml-0 md:ml-12'/>
           <div class="txt">
           <p>Tags</p>
           <p>ratings</p>
