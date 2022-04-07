@@ -39,14 +39,14 @@ const Page = () => {
           </Card.Text>
         </Card.Body>
       </Card>
-      <Card style={{height: '300px'}}>
+      <Card style={{height: '300px', marginBottom:'5px'}}>
   <Card.Body>
     <Card.Title class="text-left text-2xl text-black">Job Details</Card.Title>
     <br/>
     <p>Xyz</p>
   </Card.Body>
 </Card>
-<Card style={{height: '100px'}}>
+<Card style={{height: '100px', marginBottom:'5px'}}>
   <Card.Body>
     <br/>
     <span><p class='float-left'>Job ID</p><p class='float-right'>#123456</p></span>
@@ -54,7 +54,7 @@ const Page = () => {
 </Card>
       </div>
       <div class="w-full md:w-96">
-      <Card style={{ backgroundColor:'black', height: '450px'}}>
+      <Card style={{ backgroundColor:'black', height: '450px', marginBottom:'5px'}}>
   <Card.Body>
     <Card.Title class="text-left text-2xl text-white">Let Us Call You</Card.Title>
     <br/>

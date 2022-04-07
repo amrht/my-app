@@ -6,14 +6,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navigation from './components/navbar.js'
 import Footer from './components/footer.js'
 import { CDBFooter } from 'cdbreact';
-import Page from './pages/p1.js';
+import Page2 from './pages/p2.js';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
       <Navigation sticky='top' />
-      <Page/>
+      <Page2/>
     </div>
   );
 }
