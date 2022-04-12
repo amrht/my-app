@@ -19,18 +19,18 @@ const Page3 = () => {
 		<div class='crd h-80 bg-white' style={{boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)'}}>
 		<div className='search h-64 w-full' style={{backgroundImage: 'linear-gradient(to right, #E61B1E, #4E47E5)'}}>
 			<div className="grid w-full">
-				<span><input className="placeholder:italic mt-32 h-10 bg-white w-2/5 border rounded-l py-2 pl-9 pr-3 shadow-sm outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search for Job Titles" type="text" name="search"/>
-				<select name="cars" id="cars" class='h-10 w-16 sm:text-sm'>
+				<span class="w-4/5" style={{margin:'0 auto'}}><input className="placeholder:italic mt-32 h-10 bg-white w-3/5 border rounded-l py-2 pl-9 pr-3 shadow-sm outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search for Job Titles" type="text" name="search"/>
+				<select name="cars" id="cars" class='h-10 w-1/5 sm:text-sm'>
   					<option value="volvo">Volvo</option>
   					<option value="saab">Saab</option>
   					<option value="mercedes">Mercedes</option>
   					<option value="audi">Audi</option>
 				</select>
-				<button className="text-white h-10 rounded-r" style={{width:'15%', backgroundImage: 'linear-gradient(to right, #E61B1E, #4E47E5)'}}>Search</button></span>
+				<button className="text-white h-10 rounded-r w-1/5" style={{ backgroundImage: 'linear-gradient(to right, #E61B1E, #4E47E5)'}}>Search</button></span>
 			</div>
 		</div>
 		</div>
-		<div class='mt-12 md:ml-32 md:mr-32 ml-4 mr-4 flex md:w-3/5 w-9/10 md:mr-32 lg:ml-72 mr-8 md:ml-32 lg:mr-60 '>
+		<div class="centr w-4/5 flex mt-4 bg-slate-100" style={{ justifyContent:'space-around', margin:'0 auto'}}>
 		<div class='lft float-left h-112 hidden md:block w-1/5 '>
 		<Card style={{marginBottom:'30px'}}>
         <Card.Body>
@@ -220,18 +220,18 @@ const Page3 = () => {
 
 
 
-		<span class='inline-flex text-xl mb-2'>
+		<span class='float-left text-xl mb-2'>
 		<button variant="primary" class=" md:hidden block navbar-toggler collapsed" onClick={handleShow}>
         <span class='inline-flex'><GiHamburgerMenu/>Filters</span>
       	</button>
 		<p class='mb-0'>Showing x-y of z results</p></span>
-		<span class='mb-4'><select name="cars" id="cars" class='h-10 sm:float-right mr-2 rounded-md sm:text-sm'>
+		<span class='mb-4'><select name="cars" id="cars" class='h-10 mb-2 sm:float-right mr-2 rounded-md sm:text-sm'>
 			<option value="volvo">Volvo</option>
 			<option value="saab">Saab</option>
 	  		<option value="mercedes">Mercedes</option>
 	  		<option value="audi">Audi</option>
 		</select>
-		<select name="cars" id="cars" class='h-10 mr-1 rounded-md sm:text-sm sm:float-right'>
+		<select name="cars" id="cars" class='h-10 mr-1 mb-2 rounded-md sm:text-sm sm:float-right'>
 			<option value="volvo">Volvo</option>
 			<option value="saab">Saab</option>
 	  		<option value="mercedes">Mercedes</option>
