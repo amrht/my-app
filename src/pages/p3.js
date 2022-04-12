@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navigation from './../components/navbar.js';
-import { Card } from 'react-bootstrap';
+import { Card, Offcanvas } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ResponsiveDrawer from './../components/RespDrawer.js';
 import { CgPentagonUp } from "react-icons/cg";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 
 const Page3 = () => {
+
+	const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return(
 		<div className='bg-slate-100 h-full overflow-visible min-w-full' style={{fontFamily:'Poppins'}}>
 		<div class='crd h-80 bg-white' style={{boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)'}}>
@@ -113,7 +120,111 @@ const Page3 = () => {
 		</div>
 		<div class='rght float-right pl-0 md:pl-8 h-112 md:w-4/5 w-full'>
 		
-		<p class='float-left text-xl mb-4'>Showing x-y of z results</p>
+
+		
+
+      <Offcanvas show={show} onHide={handleClose}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Filters</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          <p className="text-left text-black label-input100 mb-2">Category</p>
+          	<select name="cars" id="cars" class=' bg-slate-50 h-10 w-full sm:text-sm'>
+  					<option value="volvo">Volvo</option>
+  					<option value="saab">Saab</option>
+  					<option value="mercedes">Mercedes</option>
+  					<option value="audi">Audi</option>
+				</select>
+			<br/>
+			<br/>
+			<p className="text-left text-black label-input100 mb-2">Location</p>
+			<input className="bg-slate-50 input100 mb-0 h-8 w-full" type="text" name="Location" placeholder="Location"/>
+			<br/>
+			<br/>
+			<p className="text-left text-black label-input100 mb-2">Job Type</p>
+          	<select name="cars" id="cars" class=' bg-slate-50 h-10 w-full sm:text-sm'>
+  					<option value="volvo">Volvo</option>
+  					<option value="saab">Saab</option>
+  					<option value="mercedes">Mercedes</option>
+  					<option value="audi">Audi</option>
+				</select>
+			<br/>
+			<br/>
+			<div class='w-full'>
+			<p className="text-left text-black label-input100 mb-2">Date Posted</p>
+			<span class='flex items-center'><input type="radio" id="3" name="fav_language" value="3"/>
+  			<label for="3">Last Hour</label></span>
+			<span class='flex items-center'><input type="radio" id="4" name="fav_language" value="4"/>
+  			<label for="4">Last 24 Hours</label></span>
+			<span class='flex items-center'><input type="radio" id="5" name="fav_language" value="5"/>
+  			<label for="5">Last 7 Days</label></span>
+			<span class='flex items-center'><input type="radio" id="3" name="fav_language" value="3"/>
+  			<label for="3">Last 14 Days</label></span>
+			<span class='flex items-center'><input type="radio" id="4" name="fav_language" value="4"/>
+  			<label for="4">Last 30 Days</label>
+			
+  			<br/>
+  			</span>
+  			</div>
+  			<br/>
+  			<p className="text-left float-left text-black label-input100 mb-2">Experience Level</p>
+  			
+  			<div style={{display:'flex' , flexDirection:'column', left:'0%'}}>
+  			<div class="form-check form-switch">
+  			<span><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+  			<label class="form-check-label" for="flexSwitchCheckDefault">Fresh</label></span>
+			</div>
+			<div class="form-check form-switch">
+  			<span><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+  			<label class="form-check-label" for="flexSwitchCheckDefault">1 Year</label></span>
+			</div>
+			<div class="form-check form-switch">
+  			<span><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+  			<label class="form-check-label" for="flexSwitchCheckDefault">2 Year</label></span>
+			</div>
+			<div class="form-check form-switch">
+  			<span><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+  			<label class="form-check-label" for="flexSwitchCheckDefault">3 Year</label></span>
+			</div>
+			<div class="form-check form-switch">
+  			<span><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+  			<label class="form-check-label" for="flexSwitchCheckDefault">4 Year</label></span>
+			</div>
+			</div>
+			<br/>
+			<button style={{width:'100%' , marginTop:'5px' ,marginBottom:'5px' , color:'white',fontSize:'12px',padding:'8px' ,borderRadius:'8px' , backgroundImage: 'linear-gradient(to right, #E61B1E, #4E47E5)'}}>Find Jobs</button>
+        
+        </Offcanvas.Body>
+      </Offcanvas>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<span class='inline-flex text-xl mb-2'>
+		<button variant="primary" class=" md:hidden block navbar-toggler collapsed" onClick={handleShow}>
+        <span class='inline-flex'><GiHamburgerMenu/>Filters</span>
+      	</button>
+		<p class='mb-0'>Showing x-y of z results</p></span>
 		<span class='mb-4'><select name="cars" id="cars" class='h-10 sm:float-right mr-2 rounded-md sm:text-sm'>
 			<option value="volvo">Volvo</option>
 			<option value="saab">Saab</option>
