@@ -111,10 +111,10 @@ const Page3 = () => {
         </Card.Body>
         </Card>
 		</div>
-		<div class='rght float-right pl-8 h-112 md:w-4/5 w-full'>
+		<div class='rght float-right pl-0 md:pl-8 h-112 md:w-4/5 w-full'>
 		
 		<p class='float-left text-xl mb-4'>Showing x-y of z results</p>
-		<span><select name="cars" id="cars" class='h-10 sm:float-right mr-2 rounded-md sm:text-sm'>
+		<span class='mb-4'><select name="cars" id="cars" class='h-10 sm:float-right mr-2 rounded-md sm:text-sm'>
 			<option value="volvo">Volvo</option>
 			<option value="saab">Saab</option>
 	  		<option value="mercedes">Mercedes</option>
@@ -126,7 +126,7 @@ const Page3 = () => {
 	  		<option value="mercedes">Mercedes</option>
 	  		<option value="audi">Audi</option>
 		</select></span>
-		<Card style={{borderRadius:'8px', marginBottom:'16px' , width:'100%'}}>
+		<Card style={{borderRadius:'8px', marginBottom:'16px', marginTop:'10px' , width:'100%'}}>
         <Card.Body class="flex">
           <div className='float-left h-24 w-24 ml-4 md:ml-8'>
           <img className='h-16 w-16 mt-1'/>
