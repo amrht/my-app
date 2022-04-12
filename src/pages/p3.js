@@ -73,28 +73,28 @@ const Page3 = () => {
   			</span>
   			</div>
   			<br/>
-  			<p className="text-left float-left text-black label-input100 mb-2">Experience Level</p>
-  			<br/>
-  			<div class="form-check form-switch float-left">
-  			<span><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-  			<label class="form-check-label" for="flexSwitchCheckDefault">Fresh</label></span>
-			</div>
-			<div class="form-check form-switch float-left">
-  			<span><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-  			<label class="form-check-label" for="flexSwitchCheckDefault">1 Year</label></span>
-			</div>
-			<div class="form-check form-switch float-left">
-  			<span><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-  			<label class="form-check-label" for="flexSwitchCheckDefault">2 Year</label></span>
-			</div>
-			<div class="form-check form-switch float-left">
-  			<span><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-  			<label class="form-check-label" for="flexSwitchCheckDefault">3 Year</label></span>
-			</div>
-			<div class="form-check form-switch float-left">
-  			<span><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-  			<label class="form-check-label" for="flexSwitchCheckDefault">4 Year</label></span>
-			</div>
+  			<p className="text-left text-black label-input100 mb-2">Experience Level</p>
+        <div class="form-check form-switch" style={{display:'flex'}}>
+        <span><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+        <label class="form-check-label" for="flexSwitchCheckDefault">Fresh</label></span>
+      </div>
+      <div class="form-check form-switch" style={{display:'flex'}}>
+        <span><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+        <label class="form-check-label" for="flexSwitchCheckDefault">1 Year</label></span>
+      </div>
+      <div class="form-check form-switch" style={{display:'flex'}}>
+        <span><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+        <label class="form-check-label" for="flexSwitchCheckDefault">2 Year</label></span>
+      </div>
+      <div class="form-check form-switch" style={{display:'flex'}}>
+        <span><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+        <label class="form-check-label" for="flexSwitchCheckDefault">3 Year</label></span>
+      </div>
+      <div class="form-check form-switch" style={{display:'flex'}}>
+        <span><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+        <label class="form-check-label" for="flexSwitchCheckDefault">4 Year</label></span>
+      </div>
+      
 			<br/>
 			<button style={{width:'100%' , marginTop:'5px' ,marginBottom:'5px' , color:'white',fontSize:'12px',padding:'8px' ,borderRadius:'8px' , backgroundImage: 'linear-gradient(to right, #E61B1E, #4E47E5)'}}>Find Jobs</button>
         </Card.Body>
@@ -167,7 +167,7 @@ const Page3 = () => {
   			</span>
   			</div>
   			<br/>
-  			<p className="text-left float-left text-black label-input100 mb-2">Experience Level</p>
+  			<p className="text-left text-black label-input100 mb-2">Experience Level</p>
   			
   			<div style={{display:'flex' , flexDirection:'column', left:'0%'}}>
   			<div class="form-check form-switch">
