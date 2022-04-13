@@ -30,42 +30,42 @@ const Page = () => {
           <br/>
           <br/>
           <div class='float-left'>
-          <div class="inline-flex w-1/3">
+          <div class="inline-flex sm:w-1/3 justify-center sm:justify-start w-full">
           <img src={icon} class='h-16 w-16'/>
           <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
           <p class='text-black text-left align-top'>Experience</p>
           <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
           </div>
           </div>
-          <div class="inline-flex w-1/3">
+          <div class="inline-flex sm:w-1/3 justify-center sm:justify-start w-full">
           <img src={icon} class='h-16 w-16'/>
           <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
           <p class='text-black text-left align-top'>Experience</p>
           <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
           </div>
           </div>
-          <div class="inline-flex w-1/3">
+          <div class="inline-flex sm:w-1/3 justify-center sm:justify-start w-full">
           <img src={icon} class='h-16 w-16'/>
           <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
           <p class='text-black text-left align-top'>Experience</p>
           <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
           </div>
           </div>
-          <div class="inline-flex w-1/3">
+          <div class="inline-flex sm:w-1/3 justify-center sm:justify-start w-full">
           <img src={icon} class='h-16 w-16'/>
           <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
           <p class='text-black text-left align-top'>Experience</p>
           <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
           </div>
           </div>
-          <div class="inline-flex w-1/3">
+          <div class="inline-flex sm:w-1/3 justify-center sm:justify-start w-full">
           <img src={icon} class='h-16 w-16'/>
           <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
           <p class='text-black text-left align-top'>Experience</p>
           <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
           </div>
           </div>
-          <div class="inline-flex w-1/3">
+          <div class="inline-flex sm:w-1/3 justify-center sm:justify-start w-full">
           <img src={icon} class='h-16 w-16'/>
           <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
           <p class='text-black text-left align-top'>Experience</p>
@@ -86,9 +86,222 @@ const Page = () => {
           </Card.Text>
         </Card.Body>
       </Card>
+
+      <div class='mt-4 w-full sm:px-8 px-12 md:px-4 overflow-hidden' style={{margin:'0 auto'}}>
+      <Card style={{float:'left', height:'200px',width:'200px',marginBottom:'10px',marginLeft:'5px',marginRight:'5px', justifyContent:'center'}}>
+        <Card.Body class='p-2'>
+          <div class="inline-flex float-left">
+          <img src={icon} class='h-16 w-16'/>
+          <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
+          <p class='text-black text-left align-top'>Experience</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          </div>
+          </div>
+        </Card.Body>
+        </Card>
+        <Card style={{float:'left', height:'200px',width:'200px',marginBottom:'10px',marginLeft:'5px',marginRight:'5px', justifyContent:'center'}}>
+        <Card.Body class='p-2'>
+          <div class="inline-flex float-left">
+          <img src={icon} class='h-16 w-16'/>
+          <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
+          <p class='text-black text-left align-top'>Experience</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          </div>
+          </div>
+        </Card.Body>
+        </Card>
+        <Card style={{float:'left', height:'200px',width:'200px',marginBottom:'10px',marginLeft:'5px',marginRight:'5px', justifyContent:'center'}}>
+        <Card.Body class='p-2'>
+          <div class="inline-flex float-left">
+          <img src={icon} class='h-16 w-16'/>
+          <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
+          <p class='text-black text-left align-top'>Experience</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          </div>
+          </div>
+        </Card.Body>
+        </Card>
+        <Card style={{float:'left', height:'200px',width:'200px',marginBottom:'10px',marginLeft:'5px',marginRight:'5px', justifyContent:'center'}}>
+        <Card.Body class='p-2'>
+          <div class="inline-flex float-left">
+          <img src={icon} class='h-16 w-16'/>
+          <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
+          <p class='text-black text-left align-top'>Experience</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          </div>
+          </div>
+        </Card.Body>
+        </Card>
+        <Card style={{float:'left', height:'200px',width:'200px',marginBottom:'10px',marginLeft:'5px',marginRight:'5px', justifyContent:'center'}}>
+        <Card.Body class='p-2'>
+          <div class="inline-flex float-left">
+          <img src={icon} class='h-16 w-16'/>
+          <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
+          <p class='text-black text-left align-top'>Experience</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          </div>
+          </div>
+        </Card.Body>
+        </Card>
+        <Card style={{float:'left', height:'200px',width:'200px',marginBottom:'10px',marginLeft:'5px',marginRight:'5px', justifyContent:'center'}}>
+        <Card.Body class='p-2'>
+          <div class="inline-flex float-left">
+          <img src={icon} class='h-16 w-16'/>
+          <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
+          <p class='text-black text-left align-top'>Experience</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          </div>
+          </div>
+        </Card.Body>
+        </Card>
+        <Card style={{float:'left', height:'200px',width:'200px',marginBottom:'10px',marginLeft:'5px',marginRight:'5px', justifyContent:'center'}}>
+        <Card.Body class='p-2'>
+          <div class="inline-flex float-left">
+          <img src={icon} class='h-16 w-16'/>
+          <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
+          <p class='text-black text-left align-top'>Experience</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          </div>
+          </div>
+        </Card.Body>
+        </Card>
+        <Card style={{float:'left', height:'200px',width:'200px',marginBottom:'10px',marginLeft:'5px',marginRight:'5px', justifyContent:'center'}}>
+        <Card.Body class='p-2'>
+          <div class="inline-flex float-left">
+          <img src={icon} class='h-16 w-16'/>
+          <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
+          <p class='text-black text-left align-top'>Experience</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          </div>
+          </div>
+        </Card.Body>
+        </Card>
+      
+      <Card style={{float:'left', height:'200px',width:'200px',marginBottom:'10px',marginLeft:'5px',marginRight:'5px', justifyContent:'center'}}>
+        <Card.Body class='p-2'>
+          <div class="inline-flex float-left">
+          <img src={icon} class='h-16 w-16'/>
+          <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
+          <p class='text-black text-left align-top'>Experience</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          </div>
+          </div>
+        </Card.Body>
+        </Card>
+        <Card style={{float:'left', height:'200px',width:'200px',marginBottom:'10px',marginLeft:'5px',marginRight:'5px', justifyContent:'center'}}>
+        <Card.Body class='p-2'>
+          <div class="inline-flex float-left">
+          <img src={icon} class='h-16 w-16'/>
+          <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
+          <p class='text-black text-left align-top'>Experience</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          </div>
+          </div>
+        </Card.Body>
+        </Card>
+        <Card style={{float:'left', height:'200px',width:'200px',marginBottom:'10px',marginLeft:'5px',marginRight:'5px', justifyContent:'center'}}>
+        <Card.Body class='p-2'>
+          <div class="inline-flex float-left">
+          <img src={icon} class='h-16 w-16'/>
+          <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
+          <p class='text-black text-left align-top'>Experience</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          </div>
+          </div>
+        </Card.Body>
+        </Card>
+        <Card style={{float:'left', height:'200px',width:'200px',marginBottom:'10px',marginLeft:'5px',marginRight:'5px', justifyContent:'center'}}>
+        <Card.Body class='p-2'>
+          <div class="inline-flex float-left">
+          <img src={icon} class='h-16 w-16'/>
+          <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
+          <p class='text-black text-left align-top'>Experience</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          </div>
+          </div>
+        </Card.Body>
+        </Card>
+        <Card style={{float:'left', height:'200px',width:'200px',marginBottom:'10px',marginLeft:'5px',marginRight:'5px', justifyContent:'center'}}>
+        <Card.Body class='p-2'>
+          <div class="inline-flex float-left">
+          <img src={icon} class='h-16 w-16'/>
+          <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
+          <p class='text-black text-left align-top'>Experience</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          </div>
+          </div>
+        </Card.Body>
+        </Card>
+        <Card style={{float:'left', height:'200px',width:'200px',marginBottom:'10px',marginLeft:'5px',marginRight:'5px', justifyContent:'center'}}>
+        <Card.Body class='p-2'>
+          <div class="inline-flex float-left">
+          <img src={icon} class='h-16 w-16'/>
+          <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
+          <p class='text-black text-left align-top'>Experience</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          </div>
+          </div>
+        </Card.Body>
+        </Card>
+        <Card style={{float:'left', height:'200px',width:'200px',marginBottom:'10px',marginLeft:'5px',marginRight:'5px', justifyContent:'center'}}>
+        <Card.Body class='p-2'>
+          <div class="inline-flex float-left">
+          <img src={icon} class='h-16 w-16'/>
+          <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
+          <p class='text-black text-left align-top'>Experience</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          </div>
+          </div>
+        </Card.Body>
+        </Card>
+        <Card style={{float:'left', height:'200px',width:'200px',marginBottom:'10px',marginLeft:'5px',marginRight:'5px', justifyContent:'center'}}>
+        <Card.Body class='p-2'>
+          <div class="inline-flex float-left">
+          <img src={icon} class='h-16 w-16'/>
+          <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
+          <p class='text-black text-left align-top'>Experience</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
+          </div>
+          </div>
+        </Card.Body>
+        </Card>
       </div>
+      </div>
+
       <div class="float-right w-full md:w-1/4 text-sm">
-      <Card class=' sticky top-0' style={{height:'360px', marginBottom:'5px', borderRadius:'15px', backgroundImage: 'linear-gradient(#E61B1E, #4E47E5)'}}>
+      <Card class=' sticky top-0' style={{ marginBottom:'5px', borderRadius:'15px', backgroundImage: 'linear-gradient(#E61B1E, #4E47E5)'}}>
   <Card.Body>
     <Card.Title class="text-left text-2xl text-white">Let Us Call You</Card.Title>
     
