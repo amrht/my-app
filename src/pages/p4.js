@@ -87,19 +87,22 @@ const Page = () => {
         </Card.Body>
       </Card>
       </div>
-      <div class="float-right w-full md:w-1/4" style={{borderRadius:'10px'}}>
-      <Card class=' sticky top-0' style={{height:'380px', marginBottom:'5px', borderRadius:'40px', backgroundImage: 'linear-gradient(#E61B1E, #4E47E5)'}}>
+      <div class="float-right w-full md:w-1/4 text-sm">
+      <Card class=' sticky top-0' style={{height:'360px', marginBottom:'5px', borderRadius:'15px', backgroundImage: 'linear-gradient(#E61B1E, #4E47E5)'}}>
   <Card.Body>
     <Card.Title class="text-left text-2xl text-white">Let Us Call You</Card.Title>
-    <br/>
-    <p class="text-left text-white label-input100">Name</p>
-  <input class="input100 mb-0 h-8 w-full" type="text" name="name" placeholder="Name"/>
+    
+    <p class="text-left text-white label-input100 mb-0 mt-2">Name</p>
+  <input class="input100 mb-0 h-8 rounded w-full" type="text" name="name" placeholder="Name"/>
   <br/>
-  <p class="text-left text-white label-input100">Email</p>
-  <input class="input100 mb-0 h-8 w-full" type="text" name="email" placeholder="Email"/>
+  <p class="text-left text-white label-input100 mb-0 mt-2">Your Mobile</p>
+  <input class="input100 rounded mb-0 h-8 w-full" type="text" name="Mobile" placeholder="Mobile"/>
   <br/>
-  <p class="text-left text-white label-input100">Message</p>
-  <input class="input100 mb-0 h-8 w-full" type="text" name="Message" placeholder="Message"/>
+  <p class="text-left text-white label-input100 mb-0 mt-2">Email</p>
+  <input class="rounded input100 mb-0 h-8 w-full" type="text" name="email" placeholder="Email"/>
+  <br/>
+  <p class="text-left text-white label-input100 mb-0 mt-2">Message</p>
+  <input class="rounded input100 mb-0 h-8 w-full" type="text" name="Message" placeholder="Message"/>
   <br/>
   <br/>
   <button class="bg-white text-black py-2 px-4 float-left rounded">
