@@ -2,12 +2,14 @@ import React from 'react';
 import Navigation from './../components/navbar.js';
 import { Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import icon from './Icon.svg'
+import icon from './Icon.svg';
+import bgi from './bgi2.jpg';
+
 const Page = () => {
   return(
     <div className='bg-slate-100 h-full overflow-visible min-w-full' style={{fontFamily:'Poppins'}}>
     <div class='crd h-80 bg-white' style={{boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)'}}>
-    <div className='search h-64 w-full' style={{backgroundImage: 'linear-gradient(to right, #E61B1E, #4E47E5)'}}>
+    <div className='search h-64 w-full' style={{ backgroundImage: `url(${bgi})`,backgroundSize:'cover' }}>
       <div className="grid w-full">
         <span class="w-4/5" style={{margin:'0 auto'}}><input className="placeholder:italic mt-32 h-10 bg-white w-3/5 border rounded-l py-2 pl-9 pr-3 shadow-sm outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search for Job Titles" type="text" name="search"/>
         <select name="cars" id="cars" class='h-10 w-1/5 sm:text-sm'>
@@ -19,11 +21,13 @@ const Page = () => {
         <button className="text-white h-10 rounded-r w-1/5" style={{ backgroundImage: 'linear-gradient(to right, #E61B1E, #4E47E5)'}}>Search</button></span>
       </div>
     </div>
-    <div class='h-16 p-16'>
+    
+    <div class='h-16 pt-3'>
     <p class='text-2xl' style={{margin:'auto'}}> BreadCrumbs </p>
     </div>
     </div>
     <div class="centr w-4/5 block md:flex mt-4 bg-slate-100" style={{ justifyContent:'space-around', margin:'0 auto'}}>
+      // Edit
       <div class='float-right w-full md:w-3/4' style={{paddingRight:'15px'}}> 
       <Card style={{ marginBottom:'5px'}}>
         <Card.Body>
