@@ -21,7 +21,7 @@ const Page = () => {
         <button className="text-white h-10 rounded-r w-1/5" style={{ backgroundImage: 'linear-gradient(to right, #E61B1E, #4E47E5)'}}>Search</button></span>
       </div>
     </div>
-    
+    //Edit
     <div class='h-16 pt-3'>
     <p class='text-2xl' style={{margin:'auto'}}> BreadCrumbs </p>
     </div>
