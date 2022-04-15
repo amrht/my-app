@@ -3,8 +3,9 @@ import Navigation from './../components/navbar.js';
 import { Card, Offcanvas } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ResponsiveDrawer from './../components/RespDrawer.js';
-import { CgPentagonUp } from "react-icons/cg";
+import  bookmark  from "./bookmark.svg";
 import { GiHamburgerMenu } from "react-icons/gi";
+import bgi from './bgi2.jpg'
 
 
 const Page3 = () => {
@@ -17,10 +18,12 @@ const Page3 = () => {
   return(
 		<div className='bg-slate-100 h-full overflow-visible min-w-full' style={{fontFamily:'Poppins'}}>
 		<div class='crd h-80 bg-white' style={{boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)'}}>
-		<div className='search h-64 w-full' style={{backgroundImage: 'linear-gradient(to right, #E61B1E, #4E47E5)'}}>
+    // Edit
+		<div className='search h-64 w-full' style={{ backgroundImage: `url(${bgi})`,backgroundSize:'cover' }}>
 			<div className="grid w-full">
 				<span class="w-4/5" style={{margin:'0 auto'}}><input className="placeholder:italic mt-32 h-10 bg-white w-3/5 border rounded-l py-2 pl-9 pr-3 shadow-sm outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search for Job Titles" type="text" name="search"/>
-				<select name="cars" id="cars" class='h-10 w-1/5 sm:text-sm'>
+				// Edit
+        <select name="cars" id="cars" class='h-10 w-1/5 sm:text-sm' style={{border:'none',padding:'0px 12px'}}>
   					<option value="volvo">Volvo</option>
   					<option value="saab">Saab</option>
   					<option value="mercedes">Mercedes</option>
@@ -32,10 +35,12 @@ const Page3 = () => {
 		</div>
 		<div class="centr w-4/5 flex mt-4 bg-slate-100" style={{ justifyContent:'space-around', margin:'0 auto'}}>
 		<div class='lft float-left h-112 hidden md:block w-1/5 '>
-		<Card style={{marginBottom:'30px'}}>
+		// Edit
+    <Card style={{marginBottom:'30px', borderRadius:'15px', padding:'20px'}}>
         <Card.Body>
-          	<p className="text-left text-black label-input100 mb-2">Category</p>
-          	<select name="cars" id="cars" class=' bg-slate-50 h-10 w-full sm:text-sm'>
+        // Edit
+          	<p className="text-left text-black label-input100 mb-2" style={{marginBottom:'12px' ,padding:'0px 12px'}}>Category</p>
+          	<select name="cars" id="cars" class='bg-slate-50 h-10 w-full sm:text-sm' style={{padding:'0px 12px'}}>
   					<option value="volvo">Volvo</option>
   					<option value="saab">Saab</option>
   					<option value="mercedes">Mercedes</option>
@@ -43,12 +48,14 @@ const Page3 = () => {
 				</select>
 			<br/>
 			<br/>
-			<p className="text-left text-black label-input100 mb-2">Location</p>
-			<input className="bg-slate-50 input100 mb-0 h-8 w-full" type="text" name="Location" placeholder="Location"/>
+			<p className="text-left text-black label-input100 mb-2" style={{marginBottom:'12px'}}>Location</p>
+			// Edit
+      <input className="bg-slate-50 input100 mb-0 h-8 w-full" type="text" name="Location" style={{padding:'0px 12px'}} placeholder="Location"/>
 			<br/>
 			<br/>
-			<p className="text-left text-black label-input100 mb-2">Job Type</p>
-          	<select name="cars" id="cars" class=' bg-slate-50 h-10 w-full sm:text-sm'>
+			// Edit
+      <p className="text-left text-black label-input100 mb-2">Job Type</p>
+          	<select name="cars" id="cars" class=' bg-slate-50 h-10 w-full sm:text-sm' style={{padding:'0px 12px'}}>
   					<option value="volvo">Volvo</option>
   					<option value="saab">Saab</option>
   					<option value="mercedes">Mercedes</option>
@@ -101,13 +108,15 @@ const Page3 = () => {
         </Card>
         <Card>
         <Card.Body>
-          <Card.Title class='text-left'>Job Alert</Card.Title>
-          <p className="text-left text-black label-input100 mb-2">Title</p>
-			<input className="bg-slate-50 input100 mb-0 h-8 w-full" type="text" name="Location" placeholder="Location"/>
+          <Card.Title class='text-left text-2xl'>Job Alert</Card.Title>
+          <br/>
+          <p className="text-left text-black label-input100 mb-2">Email</p>
+			<input className="bg-slate-50 input100 mb-0 h-8 w-full" type="text" name="Location" style={{padding:'0px 12px'}} placeholder="Location"/>
 			<br/>
 			<br/>
 			<p className="text-left text-black label-input100 mb-2">Email Frequency</p>
-          	<select name="cars" id="cars" class=' bg-slate-50 h-10 w-full sm:text-sm'>
+          	// Edit
+            <select name="cars" id="cars" style={{padding:'0px 12px'}} class=' bg-slate-50 h-10 w-full sm:text-sm'>
   					<option value="volvo">Volvo</option>
   					<option value="saab">Saab</option>
   					<option value="mercedes">Mercedes</option>
@@ -118,7 +127,7 @@ const Page3 = () => {
         </Card.Body>
         </Card>
 		</div>
-		<div class='rght float-right pl-0 md:pl-8 h-112 md:w-4/5 w-full'>
+		<div class='rght float-right pl-0 md:pl-6 h-112 md:w-4/5 w-full'>
 		
 
 		
@@ -237,13 +246,15 @@ const Page3 = () => {
 	  		<option value="mercedes">Mercedes</option>
 	  		<option value="audi">Audi</option>
 		</select></span>
-		<Card style={{borderRadius:'8px', marginBottom:'16px', marginTop:'10px' , width:'100%'}}>
+    // Edit
+		<Card style={{borderRadius:'15px', marginBottom:'16px', marginTop:'10px', padding:'20px' , width:'100%'}}>
         <Card.Body class="flex">
           <div className='float-left h-24 w-24 ml-4 md:ml-8'>
           <img className='h-16 w-16 mt-1'/>
           </div> 
           <div class='float-right pl-2 pr-4 w-full'>
-          <p class='float-right text-4xl text-black mb-0'><CgPentagonUp/></p>
+          // Edit
+          <img src={bookmark} class='float-right mb-0' />
           <p class='text-2xl text-left mt-2'>House Driver Required in Qatar</p>
             <p class="text-left mb-0">Tags</p>
             <p class="sm:text-right text-left text-2xl mb-0">999$</p>
@@ -252,19 +263,20 @@ const Page3 = () => {
             <a style={{marginRight:'4px', color:'white',fontSize:'12px',padding:'4px' ,borderRadius:'2px' ,backgroundColor: '#E61B1E'}}>Full Time</a>
             </span>
             <br/>
-            <button class="sm:float-right float-left" style={{marginTop:'5px' ,marginBottom:'5px' , color:'white',fontSize:'16px',padding:'4px' ,borderRadius:'5px' , backgroundImage: 'linear-gradient(to right, #E61B1E, #4E47E5)'}}>Apply Now</button>
+            // Edit
+            <button class="sm:float-right float-left" style={{height:'36px', marginTop:'5px' ,marginBottom:'5px' , color:'white',fontSize:'16px', lineHeight:'18px' , padding:'4px' ,borderRadius:'5px' , backgroundImage: 'linear-gradient(to right, #E61B1E, #4E47E5)'}}>Apply Now</button>
 
           </div>
 
         </Card.Body>
         </Card>
-        <Card style={{borderRadius:'8px', marginBottom:'16px' , width:'100%'}}>
+        <Card style={{borderRadius:'15px', marginBottom:'16px', marginTop:'10px', padding:'20px' , width:'100%'}}>
         <Card.Body class="flex">
           <div className='float-left h-24 w-24 ml-4 md:ml-8'>
           <img className='h-16 w-16 mt-1'/>
           </div> 
           <div class='float-right pl-2 pr-4 w-full'>
-          <p class='float-right text-4xl text-black mb-0'><CgPentagonUp/></p>
+          <img src={bookmark} class='float-right mb-0' />
           <p class='text-2xl text-left mt-2'>House Driver Required in Qatar</p>
             <p class="text-left mb-0">Tags</p>
             <p class="sm:text-right text-left text-2xl mb-0">999$</p>
@@ -273,19 +285,19 @@ const Page3 = () => {
             <a style={{marginRight:'4px', color:'white',fontSize:'12px',padding:'4px' ,borderRadius:'2px' ,backgroundColor: '#E61B1E'}}>Full Time</a>
             </span>
             <br/>
-            <button class="sm:float-right float-left" style={{marginTop:'5px' ,marginBottom:'5px' , color:'white',fontSize:'16px',padding:'4px' ,borderRadius:'5px' , backgroundImage: 'linear-gradient(to right, #E61B1E, #4E47E5)'}}>Apply Now</button>
+            <button class="sm:float-right float-left" style={{height:'36px', marginTop:'5px' ,marginBottom:'5px' , color:'white',fontSize:'16px', lineHeight:'18px' , padding:'4px' ,borderRadius:'5px' , backgroundImage: 'linear-gradient(to right, #E61B1E, #4E47E5)'}}>Apply Now</button>
 
           </div>
 
         </Card.Body>
         </Card>
-        <Card style={{borderRadius:'8px', marginBottom:'16px' , width:'100%'}}>
+        <Card style={{borderRadius:'15px', marginBottom:'16px', marginTop:'10px', padding:'20px' , width:'100%'}}>
         <Card.Body class="flex">
           <div className='float-left h-24 w-24 ml-4 md:ml-8'>
           <img className='h-16 w-16 mt-1'/>
           </div> 
           <div class='float-right pl-2 pr-4 w-full'>
-          <p class='float-right text-4xl text-black mb-0'><CgPentagonUp/></p>
+          <img src={bookmark} class='float-right mb-0' />
           <p class='text-2xl text-left mt-2'>House Driver Required in Qatar</p>
             <p class="text-left mb-0">Tags</p>
             <p class="sm:text-right text-left text-2xl mb-0">999$</p>
@@ -294,19 +306,19 @@ const Page3 = () => {
             <a style={{marginRight:'4px', color:'white',fontSize:'12px',padding:'4px' ,borderRadius:'2px' ,backgroundColor: '#E61B1E'}}>Full Time</a>
             </span>
             <br/>
-            <button class="sm:float-right float-left" style={{marginTop:'5px' ,marginBottom:'5px' , color:'white',fontSize:'16px',padding:'4px' ,borderRadius:'5px' , backgroundImage: 'linear-gradient(to right, #E61B1E, #4E47E5)'}}>Apply Now</button>
+            <button class="sm:float-right float-left" style={{height:'36px', marginTop:'5px' ,marginBottom:'5px' , color:'white',fontSize:'16px', lineHeight:'18px' , padding:'4px' ,borderRadius:'5px' , backgroundImage: 'linear-gradient(to right, #E61B1E, #4E47E5)'}}>Apply Now</button>
 
           </div>
 
         </Card.Body>
         </Card>
-        <Card style={{borderRadius:'8px', marginBottom:'16px' , width:'100%'}}>
+        <Card style={{borderRadius:'15px', marginBottom:'16px', marginTop:'10px', padding:'20px' , width:'100%'}}>
         <Card.Body class="flex">
           <div className='float-left h-24 w-24 ml-4 md:ml-8'>
           <img className='h-16 w-16 mt-1'/>
           </div> 
           <div class='float-right pl-2 pr-4 w-full'>
-          <p class='float-right text-4xl text-black mb-0'><CgPentagonUp/></p>
+          <img src={bookmark} class='float-right mb-0' />
           <p class='text-2xl text-left mt-2'>House Driver Required in Qatar</p>
             <p class="text-left mb-0">Tags</p>
             <p class="sm:text-right text-left text-2xl mb-0">999$</p>
@@ -315,19 +327,19 @@ const Page3 = () => {
             <a style={{marginRight:'4px', color:'white',fontSize:'12px',padding:'4px' ,borderRadius:'2px' ,backgroundColor: '#E61B1E'}}>Full Time</a>
             </span>
             <br/>
-            <button class="sm:float-right float-left" style={{marginTop:'5px' ,marginBottom:'5px' , color:'white',fontSize:'16px',padding:'4px' ,borderRadius:'5px' , backgroundImage: 'linear-gradient(to right, #E61B1E, #4E47E5)'}}>Apply Now</button>
+            <button class="sm:float-right float-left" style={{height:'36px', marginTop:'5px' ,marginBottom:'5px' , color:'white',fontSize:'16px', lineHeight:'18px' , padding:'4px' ,borderRadius:'5px' , backgroundImage: 'linear-gradient(to right, #E61B1E, #4E47E5)'}}>Apply Now</button>
 
           </div>
 
         </Card.Body>
         </Card>
-        <Card style={{borderRadius:'8px', marginBottom:'16px' , width:'100%'}}>
+        <Card style={{borderRadius:'15px', marginBottom:'16px', marginTop:'10px', padding:'20px' , width:'100%'}}>
         <Card.Body class="flex">
           <div className='float-left h-24 w-24 ml-4 md:ml-8'>
           <img className='h-16 w-16 mt-1'/>
           </div> 
           <div class='float-right pl-2 pr-4 w-full'>
-          <p class='float-right text-4xl text-black mb-0'><CgPentagonUp/></p>
+          <img src={bookmark} class='float-right mb-0' />
           <p class='text-2xl text-left mt-2'>House Driver Required in Qatar</p>
             <p class="text-left mb-0">Tags</p>
             <p class="sm:text-right text-left text-2xl mb-0">999$</p>
@@ -336,19 +348,19 @@ const Page3 = () => {
             <a style={{marginRight:'4px', color:'white',fontSize:'12px',padding:'4px' ,borderRadius:'2px' ,backgroundColor: '#E61B1E'}}>Full Time</a>
             </span>
             <br/>
-            <button class="sm:float-right float-left" style={{marginTop:'5px' ,marginBottom:'5px' , color:'white',fontSize:'16px',padding:'4px' ,borderRadius:'5px' , backgroundImage: 'linear-gradient(to right, #E61B1E, #4E47E5)'}}>Apply Now</button>
+            <button class="sm:float-right float-left" style={{height:'36px', marginTop:'5px' ,marginBottom:'5px' , color:'white',fontSize:'16px', lineHeight:'18px' , padding:'4px' ,borderRadius:'5px' , backgroundImage: 'linear-gradient(to right, #E61B1E, #4E47E5)'}}>Apply Now</button>
 
           </div>
 
         </Card.Body>
         </Card>
-        <Card style={{borderRadius:'8px', marginBottom:'16px' , width:'100%'}}>
+        <Card style={{borderRadius:'15px', marginBottom:'16px', marginTop:'10px', padding:'20px' , width:'100%'}}>
         <Card.Body class="flex">
           <div className='float-left h-24 w-24 ml-4 md:ml-8'>
           <img className='h-16 w-16 mt-1'/>
           </div> 
           <div class='float-right pl-2 pr-4 w-full'>
-          <p class='float-right text-4xl text-black mb-0'><CgPentagonUp/></p>
+          <img src={bookmark} class='float-right mb-0' />
           <p class='text-2xl text-left mt-2'>House Driver Required in Qatar</p>
             <p class="text-left mb-0">Tags</p>
             <p class="sm:text-right text-left text-2xl mb-0">999$</p>
@@ -357,7 +369,7 @@ const Page3 = () => {
             <a style={{marginRight:'4px', color:'white',fontSize:'12px',padding:'4px' ,borderRadius:'2px' ,backgroundColor: '#E61B1E'}}>Full Time</a>
             </span>
             <br/>
-            <button class="sm:float-right float-left" style={{marginTop:'5px' ,marginBottom:'5px' , color:'white',fontSize:'16px',padding:'4px' ,borderRadius:'5px' , backgroundImage: 'linear-gradient(to right, #E61B1E, #4E47E5)'}}>Apply Now</button>
+            <button class="sm:float-right float-left" style={{height:'36px', marginTop:'5px' ,marginBottom:'5px' , color:'white',fontSize:'16px', lineHeight:'18px' , padding:'4px' ,borderRadius:'5px' , backgroundImage: 'linear-gradient(to right, #E61B1E, #4E47E5)'}}>Apply Now</button>
 
           </div>
 
