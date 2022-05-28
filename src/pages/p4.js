@@ -4,10 +4,11 @@ import { Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import icon from './Icon.svg';
 import bgi from './bgi2.jpg';
+import elps from './elps.png';
 
 const Page = () => {
   return(
-    <div className='bg-slate-100 h-full overflow-visible min-w-full' style={{fontFamily:'Poppins'}}>
+    <div className='bg-slate-100 h-full overflow-hidden min-w-full' style={{fontFamily:'Poppins'}}>
     <div class='crd h-80 bg-white' style={{boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)'}}>
     <div className='search h-64 w-full' style={{ backgroundImage: `url(${bgi})`,backgroundSize:'cover' }}>
       <div className="grid w-full">
@@ -21,68 +22,101 @@ const Page = () => {
         <button className="text-white h-10 rounded-r w-1/5" style={{ backgroundImage: 'linear-gradient(to right, #E61B1E, #4E47E5)'}}>Search</button></span>
       </div>
     </div>
-    //Edit
-    <div class='h-16 pt-3'>
-    <p class='text-2xl' style={{margin:'auto'}}> BreadCrumbs </p>
+    <div class='h-16 pt-3 w-4/5 text-left' style={{margin:'auto'}}>
+    <p class='text-xl' style={{margin:'auto'}}> BreadCrumbs </p>
     </div>
     </div>
     <div class="centr w-4/5 block md:flex mt-4 bg-slate-100" style={{ justifyContent:'space-around', margin:'0 auto'}}>
-      // Edit
       <div class='float-right w-full md:w-3/4' style={{paddingRight:'15px'}}> 
-      <Card style={{ marginBottom:'5px'}}>
-        <Card.Body>
-          <Card.Title class="text-3xl">Hardware Technician</Card.Title>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <div class='float-left'>
-          <div class="inline-flex sm:w-1/3 justify-center sm:justify-start w-full">
-          <img src={icon} class='h-16 w-16'/>
-          <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
-          <p class='text-black text-left align-top'>Experience</p>
-          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
-          </div>
-          </div>
-          <div class="inline-flex sm:w-1/3 justify-center sm:justify-start w-full">
-          <img src={icon} class='h-16 w-16'/>
-          <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
-          <p class='text-black text-left align-top'>Experience</p>
-          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
-          </div>
-          </div>
-          <div class="inline-flex sm:w-1/3 justify-center sm:justify-start w-full">
-          <img src={icon} class='h-16 w-16'/>
-          <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
-          <p class='text-black text-left align-top'>Experience</p>
-          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
-          </div>
-          </div>
-          <div class="inline-flex sm:w-1/3 justify-center sm:justify-start w-full">
-          <img src={icon} class='h-16 w-16'/>
-          <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
-          <p class='text-black text-left align-top'>Experience</p>
-          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
-          </div>
-          </div>
-          <div class="inline-flex sm:w-1/3 justify-center sm:justify-start w-full">
-          <img src={icon} class='h-16 w-16'/>
-          <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
-          <p class='text-black text-left align-top'>Experience</p>
-          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
-          </div>
-          </div>
-          <div class="inline-flex sm:w-1/3 justify-center sm:justify-start w-full">
-          <img src={icon} class='h-16 w-16'/>
-          <div class="txt" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
-          <p class='text-black text-left align-top'>Experience</p>
-          <p class='text-slate-500 text-left align-bottom '>2-3 Years</p>
-          </div>
-          </div>
+      
+      <Card style={{borderRadius:'15px', marginBottom:'16px', marginTop:'10px', padding:'20px' , width:'100%'}}>
+        <Card.Body class="flex" style={{alignItems:'flex-start'}}>
+          <div className='float-left h-24 w-24 ml-4 md:ml-8'>
+          <img className='h-16 w-16 mt-1'/>
+          </div> 
+          <div class='float-right pl-2 pr-4 w-full'>
+          
+          <p class='text-2xl text-left mb-0'>House Driver Required in Qatar</p>
+            <p class="text-left text-slate-500">Netflix Technologies</p>
+            </div>
 
-      </div>
+
         </Card.Body>
-      </Card>
+        <div>
+            <div class='tiles float-left flex' style={{alignItems:'center', width:'160px', padding:'4px', borderRadius:'4px', boxShadow:'0 4px 8px 0 rgba(0,0,0,0.2)'}}>
+            <img src={elps} style={{height:'38px', width:'38px'}}/>
+            <div class='p-2 text-left'>
+            <p class='text-2xl mb-0'>105</p>
+            <p class='text-sm text-slate-500 mb-0' style={{marginTop:'-8px'}}>Vacancies</p>
+            </div>
+            </div>
+
+            <div class='tiles m-2 float-left flex' style={{alignItems:'center', width:'160px', padding:'4px', borderRadius:'4px', boxShadow:'0 4px 8px 0 rgba(0,0,0,0.2)'}}>
+            <img src={elps} style={{height:'38px', width:'38px'}}/>
+            <div class='p-2 text-left'>
+            <p class='text-2xl mb-0'>105</p>
+            <p class='text-sm text-slate-500 mb-0' style={{marginTop:'-8px'}}>Vacancies</p>
+            </div>
+            </div>
+
+            <div class='tiles m-2 float-left flex' style={{alignItems:'center', width:'160px', padding:'4px', borderRadius:'4px', boxShadow:'0 4px 8px 0 rgba(0,0,0,0.2)'}}>
+            <img src={elps} style={{height:'38px', width:'38px'}}/>
+            <div class='p-2 text-left'>
+            <p class='text-2xl mb-0'>105</p>
+            <p class='text-sm text-slate-500 mb-0' style={{marginTop:'-8px'}}>Vacancies</p>
+            </div>
+            </div>
+
+            <div class='tiles m-2 float-left flex' style={{alignItems:'center', width:'160px', padding:'4px', borderRadius:'4px', boxShadow:'0 4px 8px 0 rgba(0,0,0,0.2)'}}>
+            <img src={elps} style={{height:'38px', width:'38px'}}/>
+            <div class='p-2 text-left'>
+            <p class='text-2xl mb-0'>105</p>
+            <p class='text-sm text-slate-500 mb-0' style={{marginTop:'-8px'}}>Vacancies</p>
+            </div>
+            </div>
+
+            <div class='tiles m-2 float-left flex' style={{alignItems:'center', width:'160px', padding:'4px', borderRadius:'4px', boxShadow:'0 4px 8px 0 rgba(0,0,0,0.2)'}}>
+            <img src={elps} style={{height:'38px', width:'38px'}}/>
+            <div class='p-2 text-left'>
+            <p class='text-2xl mb-0'>105</p>
+            <p class='text-sm text-slate-500 mb-0' style={{marginTop:'-8px'}}>Vacancies</p>
+            </div>
+            </div>
+
+            <div class='tiles m-2 float-left flex' style={{alignItems:'center', width:'160px', padding:'4px', borderRadius:'4px', boxShadow:'0 4px 8px 0 rgba(0,0,0,0.2)'}}>
+            <img src={elps} style={{height:'38px', width:'38px'}}/>
+            <div class='p-2 text-left'>
+            <p class='text-2xl mb-0'>105</p>
+            <p class='text-sm text-slate-500 mb-0' style={{marginTop:'-8px'}}>Vacancies</p>
+            </div>
+            </div>
+
+            <div class='tiles m-2 float-left flex' style={{alignItems:'center', width:'160px', padding:'4px', borderRadius:'4px', boxShadow:'0 4px 8px 0 rgba(0,0,0,0.2)'}}>
+            <img src={elps} style={{height:'38px', width:'38px'}}/>
+            <div class='p-2 text-left'>
+            <p class='text-2xl mb-0'>105</p>
+            <p class='text-sm text-slate-500 mb-0' style={{marginTop:'-8px'}}>Vacancies</p>
+            </div>
+            </div>
+
+            <div class='tiles m-2 float-left flex' style={{alignItems:'center', width:'160px', padding:'4px', borderRadius:'4px', boxShadow:'0 4px 8px 0 rgba(0,0,0,0.2)'}}>
+            <img src={elps} style={{height:'38px', width:'38px'}}/>
+            <div class='p-2 text-left'>
+            <p class='text-2xl mb-0'>105</p>
+            <p class='text-sm text-slate-500 mb-0' style={{marginTop:'-8px'}}>Vacancies</p>
+            </div>
+            </div>
+
+            <div class='tiles m-2 float-left flex' style={{alignItems:'center', width:'160px', padding:'4px', borderRadius:'4px', boxShadow:'0 4px 8px 0 rgba(0,0,0,0.2)'}}>
+            <img src={elps} style={{height:'38px', width:'38px'}}/>
+            <div class='p-2 text-left'>
+            <p class='text-2xl mb-0'>105</p>
+            <p class='text-sm text-slate-500 mb-0' style={{marginTop:'-8px'}}>Vacancies</p>
+            </div>
+            </div>
+
+        </div>
+        </Card>
       <Card style={{ height: '300px', marginBottom:'5px'}}>
         <Card.Body>
           <Card.Title class='text-left text-3xl'>Job Description</Card.Title>
@@ -304,7 +338,7 @@ const Page = () => {
       </div>
 
       <div class="float-right w-full md:w-1/4 text-sm">
-      <Card class='sticky top-0' style={{position:'sticky', top:'0', marginBottom:'5px', borderRadius:'15px', backgroundImage: 'linear-gradient(50deg, #E61B1E, #4E47E5)'}}>
+      <Card class='sticky top-0' style={{position:'sticky' , height:'360px', top:'0', marginBottom:'5px', borderRadius:'15px', backgroundImage: 'linear-gradient(50deg, #E61B1E, #4E47E5)'}}>
   <Card.Body>
     <Card.Title class="text-left text-2xl text-white">Let Us Call You</Card.Title>
     
