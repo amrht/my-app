@@ -6,6 +6,30 @@ import icon from "./Icon.svg";
 import bgi from "./bgi2.jpg";
 import elps from "./elps.png";
 import bookmark from "./bookmark.svg";
+import eye from "./Group.svg";
+import date from "./Date.svg";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
 
 const Page = () => {
   return (
@@ -71,479 +95,329 @@ const Page = () => {
               width: "100%",
             }}
           >
-            <Card.Body class="flex" style={{ alignItems: "flex-start" }}>
-              <div className="float-left h-24 w-24">
-                <img
-                  className="mt-1"
-                  style={{ height: "80px", width: "80px" }}
-                />
-              </div>
-              <div class="float-right pl-2 pr-4 w-full">
-                <p class="text-2xl text-left mb-0">
-                  House Driver Required in Qatar
-                </p>
-                <p class="text-left text-slate-500">Netflix Technologies</p>
-              </div>
-            </Card.Body>
-            <div class="ml-4">
-              <div
-                class="tiles m-2 float-left flex"
-                style={{
-                  alignItems: "center",
-                  width: "160px",
-                  padding: "4px",
-                  borderRadius: "4px",
-                  boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
-                }}
-              >
-                <img src={elps} style={{ height: "38px", width: "38px" }} />
-                <div class="p-2 text-left">
-                  <p class="text-2xl mb-0">105</p>
-                  <p
-                    class="text-sm text-slate-500 mb-0"
-                    style={{ marginTop: "-8px" }}
+            <div class="flex">
+              <div>
+                <Card.Body class="flex" style={{ alignItems: "flex-start" }}>
+                  <div className="float-left h-24 w-24">
+                    <img
+                      className="mt-1"
+                      style={{ height: "80px", width: "80px" }}
+                    />
+                  </div>
+                  <div class="float-right pl-2 pr-4 w-full">
+                    <p class="text-2xl text-left mb-0">
+                      House Driver Required in Qatar
+                    </p>
+                    <p class="text-left text-slate-500">Netflix Technologies</p>
+                  </div>
+                  <div class="sideinfo">
+                    <span
+                      class="flex items-baseline"
+                      style={{ marginBottom: "15px" }}
+                    >
+                      <img src={eye} style={{ height: "20x", width: "20px" }} />
+                      <p class="text-slate-500">Views</p>
+                      <p>88.8k</p>
+                    </span>
+                    <span
+                      class="flex items-baseline"
+                      style={{ marginBottom: "15px" }}
+                    >
+                      <img
+                        src={date}
+                        style={{ height: "20x", width: "20px" }}
+                      />
+                      <p class="text-slate-500">Posted</p>
+                      <p>18/12/2022</p>
+                    </span>
+                    <span
+                      class="flex items-baseline"
+                      style={{ marginBottom: "15px" }}
+                    >
+                      <img src="" style={{ height: "20x", width: "20px" }} />
+                      <p class="text-slate-500">Category</p>
+                      <p>Service</p>
+                    </span>
+                  </div>
+                </Card.Body>
+                <div class="ml-4">
+                  <div
+                    class="tiles m-2 float-left flex"
+                    style={{
+                      alignItems: "center",
+                      width: "160px",
+                      padding: "4px",
+                      borderRadius: "4px",
+                      boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
+                    }}
                   >
-                    Vacancies
-                  </p>
-                </div>
-              </div>
+                    <img src={elps} style={{ height: "38px", width: "38px" }} />
+                    <div class="p-2 text-left">
+                      <p class="text-2xl mb-0">105</p>
+                      <p
+                        class="text-sm text-slate-500 mb-0"
+                        style={{ marginTop: "-8px" }}
+                      >
+                        Vacancies
+                      </p>
+                    </div>
+                  </div>
 
-              <div
-                class="tiles m-2 float-left flex"
-                style={{
-                  alignItems: "center",
-                  width: "160px",
-                  padding: "4px",
-                  borderRadius: "4px",
-                  boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
-                }}
-              >
-                <img src={elps} style={{ height: "38px", width: "38px" }} />
-                <div class="p-2 text-left">
-                  <p class="text-2xl mb-0">105</p>
-                  <p
-                    class="text-sm text-slate-500 mb-0"
-                    style={{ marginTop: "-8px" }}
+                  <div
+                    class="tiles m-2 float-left flex"
+                    style={{
+                      alignItems: "center",
+                      width: "160px",
+                      padding: "4px",
+                      borderRadius: "4px",
+                      boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
+                    }}
                   >
-                    Vacancies
-                  </p>
-                </div>
-              </div>
+                    <img src={elps} style={{ height: "38px", width: "38px" }} />
+                    <div class="p-2 text-left">
+                      <p class="text-2xl mb-0">105</p>
+                      <p
+                        class="text-sm text-slate-500 mb-0"
+                        style={{ marginTop: "-8px" }}
+                      >
+                        Vacancies
+                      </p>
+                    </div>
+                  </div>
 
-              <div
-                class="tiles m-2 float-left flex"
-                style={{
-                  alignItems: "center",
-                  width: "160px",
-                  padding: "4px",
-                  borderRadius: "4px",
-                  boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
-                }}
-              >
-                <img src={elps} style={{ height: "38px", width: "38px" }} />
-                <div class="p-2 text-left">
-                  <p class="text-2xl mb-0">105</p>
-                  <p
-                    class="text-sm text-slate-500 mb-0"
-                    style={{ marginTop: "-8px" }}
+                  <div
+                    class="tiles m-2 float-left flex"
+                    style={{
+                      alignItems: "center",
+                      width: "160px",
+                      padding: "4px",
+                      borderRadius: "4px",
+                      boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
+                    }}
                   >
-                    Vacancies
-                  </p>
-                </div>
-              </div>
+                    <img src={elps} style={{ height: "38px", width: "38px" }} />
+                    <div class="p-2 text-left">
+                      <p class="text-2xl mb-0">105</p>
+                      <p
+                        class="text-sm text-slate-500 mb-0"
+                        style={{ marginTop: "-8px" }}
+                      >
+                        Vacancies
+                      </p>
+                    </div>
+                  </div>
 
-              <div
-                class="tiles m-2 float-left flex"
-                style={{
-                  alignItems: "center",
-                  width: "160px",
-                  padding: "4px",
-                  borderRadius: "4px",
-                  boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
-                }}
-              >
-                <img src={elps} style={{ height: "38px", width: "38px" }} />
-                <div class="p-2 text-left">
-                  <p class="text-2xl mb-0">105</p>
-                  <p
-                    class="text-sm text-slate-500 mb-0"
-                    style={{ marginTop: "-8px" }}
+                  <div
+                    class="tiles m-2 float-left flex"
+                    style={{
+                      alignItems: "center",
+                      width: "160px",
+                      padding: "4px",
+                      borderRadius: "4px",
+                      boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
+                    }}
                   >
-                    Vacancies
-                  </p>
-                </div>
-              </div>
+                    <img src={elps} style={{ height: "38px", width: "38px" }} />
+                    <div class="p-2 text-left">
+                      <p class="text-2xl mb-0">105</p>
+                      <p
+                        class="text-sm text-slate-500 mb-0"
+                        style={{ marginTop: "-8px" }}
+                      >
+                        Vacancies
+                      </p>
+                    </div>
+                  </div>
 
-              <div
-                class="tiles m-2 float-left flex"
-                style={{
-                  alignItems: "center",
-                  width: "160px",
-                  padding: "4px",
-                  borderRadius: "4px",
-                  boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
-                }}
-              >
-                <img src={elps} style={{ height: "38px", width: "38px" }} />
-                <div class="p-2 text-left">
-                  <p class="text-2xl mb-0">105</p>
-                  <p
-                    class="text-sm text-slate-500 mb-0"
-                    style={{ marginTop: "-8px" }}
+                  <div
+                    class="tiles m-2 float-left flex"
+                    style={{
+                      alignItems: "center",
+                      width: "160px",
+                      padding: "4px",
+                      borderRadius: "4px",
+                      boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
+                    }}
                   >
-                    Vacancies
-                  </p>
-                </div>
-              </div>
+                    <img src={elps} style={{ height: "38px", width: "38px" }} />
+                    <div class="p-2 text-left">
+                      <p class="text-2xl mb-0">105</p>
+                      <p
+                        class="text-sm text-slate-500 mb-0"
+                        style={{ marginTop: "-8px" }}
+                      >
+                        Vacancies
+                      </p>
+                    </div>
+                  </div>
 
-              <div
-                class="tiles m-2 float-left flex"
-                style={{
-                  alignItems: "center",
-                  width: "160px",
-                  padding: "4px",
-                  borderRadius: "4px",
-                  boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
-                }}
-              >
-                <img src={elps} style={{ height: "38px", width: "38px" }} />
-                <div class="p-2 text-left">
-                  <p class="text-2xl mb-0">105</p>
-                  <p
-                    class="text-sm text-slate-500 mb-0"
-                    style={{ marginTop: "-8px" }}
+                  <div
+                    class="tiles m-2 float-left flex"
+                    style={{
+                      alignItems: "center",
+                      width: "160px",
+                      padding: "4px",
+                      borderRadius: "4px",
+                      boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
+                    }}
                   >
-                    Vacancies
-                  </p>
-                </div>
-              </div>
+                    <img src={elps} style={{ height: "38px", width: "38px" }} />
+                    <div class="p-2 text-left">
+                      <p class="text-2xl mb-0">105</p>
+                      <p
+                        class="text-sm text-slate-500 mb-0"
+                        style={{ marginTop: "-8px" }}
+                      >
+                        Vacancies
+                      </p>
+                    </div>
+                  </div>
 
-              <div
-                class="tiles m-2 float-left flex"
-                style={{
-                  alignItems: "center",
-                  width: "160px",
-                  padding: "4px",
-                  borderRadius: "4px",
-                  boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
-                }}
-              >
-                <img src={elps} style={{ height: "38px", width: "38px" }} />
-                <div class="p-2 text-left">
-                  <p class="text-2xl mb-0">105</p>
-                  <p
-                    class="text-sm text-slate-500 mb-0"
-                    style={{ marginTop: "-8px" }}
+                  <div
+                    class="tiles m-2 float-left flex"
+                    style={{
+                      alignItems: "center",
+                      width: "160px",
+                      padding: "4px",
+                      borderRadius: "4px",
+                      boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
+                    }}
                   >
-                    Vacancies
-                  </p>
-                </div>
-              </div>
+                    <img src={elps} style={{ height: "38px", width: "38px" }} />
+                    <div class="p-2 text-left">
+                      <p class="text-2xl mb-0">105</p>
+                      <p
+                        class="text-sm text-slate-500 mb-0"
+                        style={{ marginTop: "-8px" }}
+                      >
+                        Vacancies
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="tiles m-2 float-left flex"
+                    style={{
+                      alignItems: "center",
+                      width: "160px",
+                      padding: "4px",
+                      borderRadius: "4px",
+                      boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
+                    }}
+                  >
+                    <img src={elps} style={{ height: "38px", width: "38px" }} />
+                    <div class="p-2 text-left">
+                      <p class="text-2xl mb-0">105</p>
+                      <p
+                        class="text-sm text-slate-500 mb-0"
+                        style={{ marginTop: "-8px" }}
+                      >
+                        Vacancies
+                      </p>
+                    </div>
+                  </div>
 
-              <div
-                class="tiles m-2 float-left flex"
-                style={{
-                  alignItems: "center",
-                  width: "160px",
-                  padding: "4px",
-                  borderRadius: "4px",
-                  boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
-                }}
-              >
-                <img src={elps} style={{ height: "38px", width: "38px" }} />
-                <div class="p-2 text-left">
-                  <p class="text-2xl mb-0">105</p>
-                  <p
-                    class="text-sm text-slate-500 mb-0"
-                    style={{ marginTop: "-8px" }}
+                  <div
+                    class="tiles m-2 float-left flex"
+                    style={{
+                      alignItems: "center",
+                      width: "160px",
+                      padding: "4px",
+                      borderRadius: "4px",
+                      boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
+                    }}
                   >
-                    Vacancies
-                  </p>
-                </div>
-              </div>
-
-              <div
-                class="tiles m-2 float-left flex"
-                style={{
-                  alignItems: "center",
-                  width: "160px",
-                  padding: "4px",
-                  borderRadius: "4px",
-                  boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
-                }}
-              >
-                <img src={elps} style={{ height: "38px", width: "38px" }} />
-                <div class="p-2 text-left">
-                  <p class="text-2xl mb-0">105</p>
-                  <p
-                    class="text-sm text-slate-500 mb-0"
-                    style={{ marginTop: "-8px" }}
-                  >
-                    Vacancies
-                  </p>
+                    <img src={elps} style={{ height: "38px", width: "38px" }} />
+                    <div class="p-2 text-left">
+                      <p class="text-2xl mb-0">105</p>
+                      <p
+                        class="text-sm text-slate-500 mb-0"
+                        style={{ marginTop: "-8px" }}
+                      >
+                        Vacancies
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </Card>
-          <Card style={{ height: "300px", marginBottom: "5px" }}>
-            <Card.Body>
-              <Card.Title class="text-left text-3xl">
-                Job Description
-              </Card.Title>
-              <br />
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-
-          <div
-            class="mt-4 w-full sm:px-8 px-12 md:px-4 overflow-hidden"
-            style={{ margin: "0 auto" }}
-          >
-            <Card
-              style={{
-                float: "left",
-                height: "200px",
-                width: "200px",
-                marginBottom: "10px",
-                marginLeft: "5px",
-                marginRight: "5px",
-                justifyContent: "center",
-              }}
-            >
-              <Card.Body class="p-2">
-                <div class="inline-flex float-left">
-                  <img src={icon} class="h-16 w-16" />
-                  <div
-                    class="txt"
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <p class="text-black text-left align-top">Experience</p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                  </div>
-                </div>
-              </Card.Body>
-            </Card>
-            <Card
-              style={{
-                float: "left",
-                height: "200px",
-                width: "200px",
-                marginBottom: "10px",
-                marginLeft: "5px",
-                marginRight: "5px",
-                justifyContent: "center",
-              }}
-            >
-              <Card.Body class="p-2">
-                <div class="inline-flex float-left">
-                  <img src={icon} class="h-16 w-16" />
-                  <div
-                    class="txt"
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <p class="text-black text-left align-top">Experience</p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                  </div>
-                </div>
-              </Card.Body>
-            </Card>
-            <Card
-              style={{
-                float: "left",
-                height: "200px",
-                width: "200px",
-                marginBottom: "10px",
-                marginLeft: "5px",
-                marginRight: "5px",
-                justifyContent: "center",
-              }}
-            >
-              <Card.Body class="p-2">
-                <div class="inline-flex float-left">
-                  <img src={icon} class="h-16 w-16" />
-                  <div
-                    class="txt"
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <p class="text-black text-left align-top">Experience</p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                  </div>
-                </div>
-              </Card.Body>
-            </Card>
-            <Card
-              style={{
-                float: "left",
-                height: "200px",
-                width: "200px",
-                marginBottom: "10px",
-                marginLeft: "5px",
-                marginRight: "5px",
-                justifyContent: "center",
-              }}
-            >
-              <Card.Body class="p-2">
-                <div class="inline-flex float-left">
-                  <img src={icon} class="h-16 w-16" />
-                  <div
-                    class="txt"
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <p class="text-black text-left align-top">Experience</p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                  </div>
-                </div>
-              </Card.Body>
-            </Card>
-            <Card
-              class="w-full md:w-1/2"
-              style={{
-                float: "left",
-                height: "300px",
-                marginBottom: "10px",
-                marginLeft: "5px",
-                marginRight: "5px",
-              }}
-            >
-              <Card.Body class="p-8">
-                <Card.Title class="text-left text-2xl">
-                  Documents Required
-                </Card.Title>
-                <br />
-                <p class="text-slate-500 text-left align-bottom ">2-3 Years</p>
-                <p class="text-slate-500 text-left align-bottom ">2-3 Years</p>
-                <p class="text-slate-500 text-left align-bottom ">2-3 Years</p>
-              </Card.Body>
-            </Card>
-            <Card
-              class="w-full md:w-1/2"
-              style={{
-                float: "left",
-                height: "300px",
-                marginBottom: "10px",
-                marginLeft: "10px",
-                marginRight: "15px",
-              }}
-            >
-              <Card.Body class="p-8">
-                <Card.Title class="text-left text-2xl">
-                  Documents Required
-                </Card.Title>
-                <br />
-                <p class="text-slate-500 text-left align-bottom ">2-3 Years</p>
-                <p class="text-slate-500 text-left align-bottom ">2-3 Years</p>
-                <p class="text-slate-500 text-left align-bottom ">2-3 Years</p>
-              </Card.Body>
-            </Card>
-
-            <Card
-              style={{
-                borderRadius: "15px",
-                marginBottom: "16px",
-                marginTop: "10px",
-                padding: "5px",
-                width: "40%",
-              }}
-            >
-              <Card.Body class="flex">
-                <div class="float-right pl-2 pr-4 w-full">
+          <Carousel responsive={responsive}>
+            <div>
+              <Card
+                style={{
+                  borderRadius: "15px",
+                  marginBottom: "16px",
+                  marginTop: "10px",
+                  padding: "5px",
+                  width: "260px",
+                }}
+              >
+                <Card.Body>
                   <p class="text-xl text-left mt-2">
                     House Driver Required in Qatar
                   </p>
-                  <div className="float-left h-24 w-24">
-                    <img className="h-16 w-16 mt-1" />
+                  <div
+                    class="flex"
+                    style={{
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <div className="">
+                      <img className="h-16 w-16 mt-1 float-left" />
+
+                      <p class="text-left mb-0 ml-4 float-right">Tags</p>
+                    </div>
+
+                    <span
+                      class="flex"
+                      style={{
+                        flexDirection: "column",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <a
+                        style={{
+                          marginBottom: "4px",
+                          color: "white",
+                          fontSize: "12px",
+                          padding: "4px",
+                          borderRadius: "4px",
+                          backgroundColor: "#4E47E5",
+                        }}
+                      >
+                        Full Time
+                      </a>
+                      <a
+                        style={{
+                          color: "white",
+                          fontSize: "12px",
+                          padding: "4px",
+                          borderRadius: "4px",
+                          backgroundColor: "#E61B1E",
+                        }}
+                      >
+                        Full Time
+                      </a>
+                    </span>
                   </div>
-                  <p class="text-left mb-0">Tags</p>
-
-                  <a
-                    style={{
-                      marginRight: "4px",
-                      align: "left",
-                      color: "white",
-                      fontSize: "12px",
-                      padding: "4px",
-                      borderRadius: "2px",
-                      backgroundColor: "#4E47E5",
-                    }}
-                  >
-                    Full Time
-                  </a>
-                  <a
-                    style={{
-                      marginRight: "4px",
-                      color: "white",
-                      fontSize: "12px",
-                      padding: "4px",
-                      borderRadius: "2px",
-                      backgroundColor: "#E61B1E",
-                    }}
-                  >
-                    Full Time
-                  </a>
-
                   <br />
                   <span
-                    style={{ display: "flex", justifyContent: "space-between" }}
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
                   >
-                    <span class="flex ">
+                    <span class="flex items-baseline">
                       <img
                         src={bookmark}
                         class="mr-0"
-                        style={{ height: "32px", width: "14px" }}
+                        style={{ height: "11px", width: "8px" }}
                       />
-                      <p class="text-left text-2xl mb-0">999$</p>
+                      <p class="text-left mb-0" style={{ fontSize: "16px" }}>
+                        999$
+                      </p>
                     </span>
                     <button
                       class="sm:float-right "
@@ -563,51 +437,603 @@ const Page = () => {
                       Apply Now
                     </button>
                   </span>
-                </div>
-              </Card.Body>
-            </Card>
-            <Card
-              style={{
-                float: "left",
-                height: "200px",
-                width: "200px",
-                marginBottom: "10px",
-                marginLeft: "5px",
-                marginRight: "5px",
-                justifyContent: "center",
-              }}
-            >
-              <Card.Body class="p-2">
-                <div class="inline-flex float-left">
-                  <img src={icon} class="h-16 w-16" />
+                </Card.Body>
+              </Card>
+            </div>
+            <div>
+              <Card
+                style={{
+                  borderRadius: "15px",
+                  marginBottom: "16px",
+                  marginTop: "10px",
+                  padding: "5px",
+                  width: "260px",
+                }}
+              >
+                <Card.Body>
+                  <p class="text-xl text-left mt-2">
+                    House Driver Required in Qatar
+                  </p>
                   <div
-                    class="txt"
+                    class="flex"
+                    style={{
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <div className="">
+                      <img className="h-16 w-16 mt-1 float-left" />
+
+                      <p class="text-left mb-0 ml-4 float-right">Tags</p>
+                    </div>
+
+                    <span
+                      class="flex"
+                      style={{
+                        flexDirection: "column",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <a
+                        style={{
+                          marginBottom: "4px",
+                          color: "white",
+                          fontSize: "12px",
+                          padding: "4px",
+                          borderRadius: "4px",
+                          backgroundColor: "#4E47E5",
+                        }}
+                      >
+                        Full Time
+                      </a>
+                      <a
+                        style={{
+                          color: "white",
+                          fontSize: "12px",
+                          padding: "4px",
+                          borderRadius: "4px",
+                          backgroundColor: "#E61B1E",
+                        }}
+                      >
+                        Full Time
+                      </a>
+                    </span>
+                  </div>
+                  <br />
+                  <span
                     style={{
                       display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
+                    <span class="flex items-baseline">
+                      <img
+                        src={bookmark}
+                        class="mr-0"
+                        style={{ height: "11px", width: "8px" }}
+                      />
+                      <p class="text-left mb-0" style={{ fontSize: "16px" }}>
+                        999$
+                      </p>
+                    </span>
+                    <button
+                      class="sm:float-right "
+                      style={{
+                        height: "36px",
+                        marginTop: "5px",
+                        marginBottom: "5px",
+                        color: "white",
+                        fontSize: "16px",
+                        lineHeight: "18px",
+                        padding: "4px",
+                        borderRadius: "5px",
+                        backgroundImage:
+                          "linear-gradient(to right, #E61B1E, #4E47E5)",
+                      }}
+                    >
+                      Apply Now
+                    </button>
+                  </span>
+                </Card.Body>
+              </Card>
+            </div>
+            <div>
+              <Card
+                style={{
+                  borderRadius: "15px",
+                  marginBottom: "16px",
+                  marginTop: "10px",
+                  padding: "5px",
+                  width: "260px",
+                }}
+              >
+                <Card.Body>
+                  <p class="text-xl text-left mt-2">
+                    House Driver Required in Qatar
+                  </p>
+                  <div
+                    class="flex"
+                    style={{
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <div className="">
+                      <img className="h-16 w-16 mt-1 float-left" />
+
+                      <p class="text-left mb-0 ml-4 float-right">Tags</p>
+                    </div>
+
+                    <span
+                      class="flex"
+                      style={{
+                        flexDirection: "column",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <a
+                        style={{
+                          marginBottom: "4px",
+                          color: "white",
+                          fontSize: "12px",
+                          padding: "4px",
+                          borderRadius: "4px",
+                          backgroundColor: "#4E47E5",
+                        }}
+                      >
+                        Full Time
+                      </a>
+                      <a
+                        style={{
+                          color: "white",
+                          fontSize: "12px",
+                          padding: "4px",
+                          borderRadius: "4px",
+                          backgroundColor: "#E61B1E",
+                        }}
+                      >
+                        Full Time
+                      </a>
+                    </span>
+                  </div>
+                  <br />
+                  <span
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
+                    <span class="flex items-baseline">
+                      <img
+                        src={bookmark}
+                        class="mr-0"
+                        style={{ height: "11px", width: "8px" }}
+                      />
+                      <p class="text-left mb-0" style={{ fontSize: "16px" }}>
+                        999$
+                      </p>
+                    </span>
+                    <button
+                      class="sm:float-right "
+                      style={{
+                        height: "36px",
+                        marginTop: "5px",
+                        marginBottom: "5px",
+                        color: "white",
+                        fontSize: "16px",
+                        lineHeight: "18px",
+                        padding: "4px",
+                        borderRadius: "5px",
+                        backgroundImage:
+                          "linear-gradient(to right, #E61B1E, #4E47E5)",
+                      }}
+                    >
+                      Apply Now
+                    </button>
+                  </span>
+                </Card.Body>
+              </Card>
+            </div>
+            <div>
+              <Card
+                style={{
+                  borderRadius: "15px",
+                  marginBottom: "16px",
+                  marginTop: "10px",
+                  padding: "5px",
+                  width: "260px",
+                }}
+              >
+                <Card.Body>
+                  <p class="text-xl text-left mt-2">
+                    House Driver Required in Qatar
+                  </p>
+                  <div
+                    class="flex"
+                    style={{
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <div className="">
+                      <img className="h-16 w-16 mt-1 float-left" />
+
+                      <p class="text-left mb-0 ml-4 float-right">Tags</p>
+                    </div>
+
+                    <span
+                      class="flex"
+                      style={{
+                        flexDirection: "column",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <a
+                        style={{
+                          marginBottom: "4px",
+                          color: "white",
+                          fontSize: "12px",
+                          padding: "4px",
+                          borderRadius: "4px",
+                          backgroundColor: "#4E47E5",
+                        }}
+                      >
+                        Full Time
+                      </a>
+                      <a
+                        style={{
+                          color: "white",
+                          fontSize: "12px",
+                          padding: "4px",
+                          borderRadius: "4px",
+                          backgroundColor: "#E61B1E",
+                        }}
+                      >
+                        Full Time
+                      </a>
+                    </span>
+                  </div>
+                  <br />
+                  <span
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
+                    <span class="flex items-baseline">
+                      <img
+                        src={bookmark}
+                        class="mr-0"
+                        style={{ height: "11px", width: "8px" }}
+                      />
+                      <p class="text-left mb-0" style={{ fontSize: "16px" }}>
+                        999$
+                      </p>
+                    </span>
+                    <button
+                      class="sm:float-right "
+                      style={{
+                        height: "36px",
+                        marginTop: "5px",
+                        marginBottom: "5px",
+                        color: "white",
+                        fontSize: "16px",
+                        lineHeight: "18px",
+                        padding: "4px",
+                        borderRadius: "5px",
+                        backgroundImage:
+                          "linear-gradient(to right, #E61B1E, #4E47E5)",
+                      }}
+                    >
+                      Apply Now
+                    </button>
+                  </span>
+                </Card.Body>
+              </Card>
+            </div>
+            <div>
+              <Card
+                style={{
+                  borderRadius: "15px",
+                  marginBottom: "16px",
+                  marginTop: "10px",
+                  padding: "5px",
+                  width: "260px",
+                }}
+              >
+                <Card.Body>
+                  <p class="text-xl text-left mt-2">
+                    House Driver Required in Qatar
+                  </p>
+                  <div
+                    class="flex"
+                    style={{
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <div className="">
+                      <img className="h-16 w-16 mt-1 float-left" />
+
+                      <p class="text-left mb-0 ml-4 float-right">Tags</p>
+                    </div>
+
+                    <span
+                      class="flex"
+                      style={{
+                        flexDirection: "column",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <a
+                        style={{
+                          marginBottom: "4px",
+                          color: "white",
+                          fontSize: "12px",
+                          padding: "4px",
+                          borderRadius: "4px",
+                          backgroundColor: "#4E47E5",
+                        }}
+                      >
+                        Full Time
+                      </a>
+                      <a
+                        style={{
+                          color: "white",
+                          fontSize: "12px",
+                          padding: "4px",
+                          borderRadius: "4px",
+                          backgroundColor: "#E61B1E",
+                        }}
+                      >
+                        Full Time
+                      </a>
+                    </span>
+                  </div>
+                  <br />
+                  <span
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
+                    <span class="flex items-baseline">
+                      <img
+                        src={bookmark}
+                        class="mr-0"
+                        style={{ height: "11px", width: "8px" }}
+                      />
+                      <p class="text-left mb-0" style={{ fontSize: "16px" }}>
+                        999$
+                      </p>
+                    </span>
+                    <button
+                      class="sm:float-right "
+                      style={{
+                        height: "36px",
+                        marginTop: "5px",
+                        marginBottom: "5px",
+                        color: "white",
+                        fontSize: "16px",
+                        lineHeight: "18px",
+                        padding: "4px",
+                        borderRadius: "5px",
+                        backgroundImage:
+                          "linear-gradient(to right, #E61B1E, #4E47E5)",
+                      }}
+                    >
+                      Apply Now
+                    </button>
+                  </span>
+                </Card.Body>
+              </Card>
+            </div>
+            <div>
+              <Card
+                style={{
+                  borderRadius: "15px",
+                  marginBottom: "16px",
+                  marginTop: "10px",
+                  padding: "5px",
+                  width: "260px",
+                }}
+              >
+                <Card.Body>
+                  <p class="text-xl text-left mt-2">
+                    House Driver Required in Qatar
+                  </p>
+                  <div
+                    class="flex"
+                    style={{
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <div className="">
+                      <img className="h-16 w-16 mt-1 float-left" />
+
+                      <p class="text-left mb-0 ml-4 float-right">Tags</p>
+                    </div>
+
+                    <span
+                      class="flex"
+                      style={{
+                        flexDirection: "column",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <a
+                        style={{
+                          marginBottom: "4px",
+                          color: "white",
+                          fontSize: "12px",
+                          padding: "4px",
+                          borderRadius: "4px",
+                          backgroundColor: "#4E47E5",
+                        }}
+                      >
+                        Full Time
+                      </a>
+                      <a
+                        style={{
+                          color: "white",
+                          fontSize: "12px",
+                          padding: "4px",
+                          borderRadius: "4px",
+                          backgroundColor: "#E61B1E",
+                        }}
+                      >
+                        Full Time
+                      </a>
+                    </span>
+                  </div>
+                  <br />
+                  <span
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
+                    <span class="flex items-baseline">
+                      <img
+                        src={bookmark}
+                        class="mr-0"
+                        style={{ height: "11px", width: "8px" }}
+                      />
+                      <p class="text-left mb-0" style={{ fontSize: "16px" }}>
+                        999$
+                      </p>
+                    </span>
+                    <button
+                      class="sm:float-right "
+                      style={{
+                        height: "36px",
+                        marginTop: "5px",
+                        marginBottom: "5px",
+                        color: "white",
+                        fontSize: "16px",
+                        lineHeight: "18px",
+                        padding: "4px",
+                        borderRadius: "5px",
+                        backgroundImage:
+                          "linear-gradient(to right, #E61B1E, #4E47E5)",
+                      }}
+                    >
+                      Apply Now
+                    </button>
+                  </span>
+                </Card.Body>
+              </Card>
+            </div>
+          </Carousel>
+
+          <div class="mt-4 w-full overflow-hidden" style={{ margin: "0 auto" }}>
+            <Card
+              style={{
+                borderRadius: "15px",
+                marginBottom: "16px",
+                marginTop: "10px",
+                padding: "5px",
+                width: "225px",
+              }}
+            >
+              <Card.Body>
+                <p class="text-xl text-left mt-2">
+                  House Driver Required in Qatar
+                </p>
+                <div
+                  class="flex"
+                  style={{
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <div className="">
+                    <img className="h-16 w-16 mt-1 float-left" />
+
+                    <p class="text-left mb-0 ml-4 float-right">Tags</p>
+                  </div>
+
+                  <span
+                    class="flex"
+                    style={{
                       flexDirection: "column",
                       justifyContent: "space-between",
                     }}
                   >
-                    <p class="text-black text-left align-top">Experience</p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                  </div>
+                    <a
+                      style={{
+                        marginBottom: "4px",
+                        color: "white",
+                        fontSize: "12px",
+                        padding: "4px",
+                        borderRadius: "4px",
+                        backgroundColor: "#4E47E5",
+                      }}
+                    >
+                      Full Time
+                    </a>
+                    <a
+                      style={{
+                        color: "white",
+                        fontSize: "12px",
+                        padding: "4px",
+                        borderRadius: "4px",
+                        backgroundColor: "#E61B1E",
+                      }}
+                    >
+                      Full Time
+                    </a>
+                  </span>
                 </div>
+                <br />
+                <span
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  <span class="flex items-baseline">
+                    <img
+                      src={bookmark}
+                      class="mr-0"
+                      style={{ height: "11px", width: "8px" }}
+                    />
+                    <p class="text-left mb-0" style={{ fontSize: "16px" }}>
+                      999$
+                    </p>
+                  </span>
+                  <button
+                    class="sm:float-right "
+                    style={{
+                      height: "36px",
+                      marginTop: "5px",
+                      marginBottom: "5px",
+                      color: "white",
+                      fontSize: "16px",
+                      lineHeight: "18px",
+                      padding: "4px",
+                      borderRadius: "5px",
+                      backgroundImage:
+                        "linear-gradient(to right, #E61B1E, #4E47E5)",
+                    }}
+                  >
+                    Apply Now
+                  </button>
+                </span>
               </Card.Body>
             </Card>
 
             <Card
               style={{
-                float: "left",
-                height: "200px",
-                width: "200px",
+                padding: "10px",
+                width: "100%",
                 marginBottom: "10px",
                 marginLeft: "5px",
                 marginRight: "5px",
@@ -615,278 +1041,156 @@ const Page = () => {
               }}
             >
               <Card.Body class="p-2">
-                <div class="inline-flex float-left">
-                  <img src={icon} class="h-16 w-16" />
-                  <div
-                    class="txt"
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <p class="text-black text-left align-top">Experience</p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
+                <div class="oneline pb-2">
+                  <h2 class="float-left text-base">Jobs by Location : </h2>
+                  <div class="text-left">
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Delhi
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Mumbai
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Banglore
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Lucknow
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Ahmedabad
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Madras
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      London
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Paris
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Chicago
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      New York
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      California
+                    </a>
                   </div>
                 </div>
-              </Card.Body>
-            </Card>
-            <Card
-              style={{
-                float: "left",
-                height: "200px",
-                width: "200px",
-                marginBottom: "10px",
-                marginLeft: "5px",
-                marginRight: "5px",
-                justifyContent: "center",
-              }}
-            >
-              <Card.Body class="p-2">
-                <div class="inline-flex float-left">
-                  <img src={icon} class="h-16 w-16" />
-                  <div
-                    class="txt"
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <p class="text-black text-left align-top">Experience</p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
+                <div class="oneline pb-2">
+                  <h2 class="float-left text-base">Jobs by Location : </h2>
+                  <div class="text-left">
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Delhi
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Mumbai
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Banglore
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Lucknow
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Ahmedabad
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Madras
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      London
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Paris
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Chicago
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      New York
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      California
+                    </a>
                   </div>
                 </div>
-              </Card.Body>
-            </Card>
-            <Card
-              style={{
-                float: "left",
-                height: "200px",
-                width: "200px",
-                marginBottom: "10px",
-                marginLeft: "5px",
-                marginRight: "5px",
-                justifyContent: "center",
-              }}
-            >
-              <Card.Body class="p-2">
-                <div class="inline-flex float-left">
-                  <img src={icon} class="h-16 w-16" />
-                  <div
-                    class="txt"
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <p class="text-black text-left align-top">Experience</p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
+                <div class="oneline pb-2">
+                  <h2 class="float-left text-base">Jobs by Location : </h2>
+                  <div class="text-left">
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Delhi
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Mumbai
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Banglore
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Lucknow
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Ahmedabad
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Madras
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      London
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Paris
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Chicago
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      New York
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      California
+                    </a>
                   </div>
                 </div>
-              </Card.Body>
-            </Card>
-            <Card
-              style={{
-                float: "left",
-                height: "200px",
-                width: "200px",
-                marginBottom: "10px",
-                marginLeft: "5px",
-                marginRight: "5px",
-                justifyContent: "center",
-              }}
-            >
-              <Card.Body class="p-2">
-                <div class="inline-flex float-left">
-                  <img src={icon} class="h-16 w-16" />
-                  <div
-                    class="txt"
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <p class="text-black text-left align-top">Experience</p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                  </div>
-                </div>
-              </Card.Body>
-            </Card>
-            <Card
-              style={{
-                float: "left",
-                height: "200px",
-                width: "200px",
-                marginBottom: "10px",
-                marginLeft: "5px",
-                marginRight: "5px",
-                justifyContent: "center",
-              }}
-            >
-              <Card.Body class="p-2">
-                <div class="inline-flex float-left">
-                  <img src={icon} class="h-16 w-16" />
-                  <div
-                    class="txt"
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <p class="text-black text-left align-top">Experience</p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                  </div>
-                </div>
-              </Card.Body>
-            </Card>
-            <Card
-              style={{
-                float: "left",
-                height: "200px",
-                width: "200px",
-                marginBottom: "10px",
-                marginLeft: "5px",
-                marginRight: "5px",
-                justifyContent: "center",
-              }}
-            >
-              <Card.Body class="p-2">
-                <div class="inline-flex float-left">
-                  <img src={icon} class="h-16 w-16" />
-                  <div
-                    class="txt"
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <p class="text-black text-left align-top">Experience</p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                  </div>
-                </div>
-              </Card.Body>
-            </Card>
-            <Card
-              style={{
-                float: "left",
-                height: "200px",
-                width: "200px",
-                marginBottom: "10px",
-                marginLeft: "5px",
-                marginRight: "5px",
-                justifyContent: "center",
-              }}
-            >
-              <Card.Body class="p-2">
-                <div class="inline-flex float-left">
-                  <img src={icon} class="h-16 w-16" />
-                  <div
-                    class="txt"
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <p class="text-black text-left align-top">Experience</p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                  </div>
-                </div>
-              </Card.Body>
-            </Card>
-            <Card
-              style={{
-                float: "left",
-                height: "200px",
-                width: "200px",
-                marginBottom: "10px",
-                marginLeft: "5px",
-                marginRight: "5px",
-                justifyContent: "center",
-              }}
-            >
-              <Card.Body class="p-2">
-                <div class="inline-flex float-left">
-                  <img src={icon} class="h-16 w-16" />
-                  <div
-                    class="txt"
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <p class="text-black text-left align-top">Experience</p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
-                    <p class="text-slate-500 text-left align-bottom ">
-                      2-3 Years
-                    </p>
+                <div class="oneline pb-2">
+                  <h2 class="float-left text-base">Jobs by Location : </h2>
+                  <div class="text-left">
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Delhi
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Mumbai
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Banglore
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Lucknow
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Ahmedabad
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Madras
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      London
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Paris
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      Chicago
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      New York
+                    </a>
+                    <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
+                      California
+                    </a>
                   </div>
                 </div>
               </Card.Body>
