@@ -17,13 +17,13 @@ const Navigation = () => {
      
     </Nav>
     <Nav>
-              <Nav.Link style={{color:'black'}} href='/'>Hotel</Nav.Link>
-              <Nav.Link style={{color:'black'}} href='/'>Bus</Nav.Link>
-              <Nav.Link style={{color:'black'}} href='/'>Train</Nav.Link>
-              <Nav.Link style={{color:'black'}} href='/'>Cruise</Nav.Link>
-              <Nav.Link style={{color:'black'}} href='/'>Flight</Nav.Link>
-              <Nav.Link style={{color:'black'}} href='/'>Visa</Nav.Link>
-              <Nav.Link style={{color:'black'}} href='/'>Blog</Nav.Link>
+              <Nav.Link style={{color:'black'}} src='/underprocess'>Hotel</Nav.Link>
+              <Nav.Link style={{color:'black'}} href='/underprocess'>Bus</Nav.Link>
+              <Nav.Link style={{color:'black'}} href='/underprocess'>Train</Nav.Link>
+              <Nav.Link style={{color:'black'}} href='/underprocess'>Cruise</Nav.Link>
+              <Nav.Link style={{color:'black'}} href='/underprocess'>Flight</Nav.Link>
+              <Nav.Link style={{color:'black'}} href='/underprocess'>Visa</Nav.Link>
+              <Nav.Link style={{color:'black'}} href='/underprocess'>Blog</Nav.Link>
     </Nav>
   </Navbar.Collapse>
   </Container>

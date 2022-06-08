@@ -18,11 +18,11 @@ const responsive = {
     items: 5,
   },
   desktop: {
-    breakpoint: { max: 3000, min: 1024 },
+    breakpoint: { max: 3000, min: 928 },
     items: 3,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
+    breakpoint: { max: 928, min: 464 },
     items: 2,
   },
   mobile: {
@@ -34,7 +34,7 @@ const responsive = {
 const Page = () => {
   return (
     <div
-      className="bg-slate-100 h-full overflow-visible md:overflow-hidden min-w-full"
+      className="main-body bg-slate-100 h-full min-w-full"
       style={{ fontFamily: "Poppins" }}
     >
       <div
@@ -101,7 +101,11 @@ const Page = () => {
                   <div className="float-left h-24 w-24">
                     <img
                       className="mt-1"
-                      style={{ height: "80px", width: "80px" }}
+                      style={{
+                        height: "80px",
+                        width: "80px",
+                        minWidth: "80px",
+                      }}
                     />
                   </div>
                   <div class="float-right pl-2 pr-4 w-full">
@@ -110,33 +114,33 @@ const Page = () => {
                     </p>
                     <p class="text-left text-slate-500">Netflix Technologies</p>
                   </div>
-                  <div class="sideinfo">
+                  <div class="hidden md:block">
                     <span
-                      class="flex items-baseline"
+                      class="flex items-center"
                       style={{ marginBottom: "15px" }}
                     >
                       <img src={eye} style={{ height: "20x", width: "20px" }} />
-                      <p class="text-slate-500">Views</p>
-                      <p>88.8k</p>
+                      <p class="mb-0 text-slate-500 px-2">Views</p>
+                      <p class="mb-0">88.8k</p>
                     </span>
                     <span
-                      class="flex items-baseline"
+                      class="flex items-center"
                       style={{ marginBottom: "15px" }}
                     >
                       <img
                         src={date}
                         style={{ height: "20x", width: "20px" }}
                       />
-                      <p class="text-slate-500">Posted</p>
-                      <p>18/12/2022</p>
+                      <p class="mb-0 text-slate-500 px-2">Posted</p>
+                      <p class="mb-0">18/12/2022</p>
                     </span>
                     <span
-                      class="flex items-baseline"
+                      class="flex items-center"
                       style={{ marginBottom: "15px" }}
                     >
                       <img src="" style={{ height: "20x", width: "20px" }} />
-                      <p class="text-slate-500">Category</p>
-                      <p>Service</p>
+                      <p class="mb-0 text-slate-500 px-2">Category</p>
+                      <p class="mb-0">Service</p>
                     </span>
                   </div>
                 </Card.Body>
@@ -315,7 +319,6 @@ const Page = () => {
                       </p>
                     </div>
                   </div>
-
                   <div
                     class="tiles m-2 float-left flex"
                     style={{
@@ -340,7 +343,95 @@ const Page = () => {
                 </div>
               </div>
             </div>
+
+            <div class="md:hidden block" style={{ marginLeft: "32px" }}>
+              <span class="flex items-center" style={{ marginBottom: "15px" }}>
+                <img src={eye} style={{ height: "20x", width: "20px" }} />
+                <p class="mb-0 text-slate-500 px-2">Views</p>
+                <p class="mb-0">88.8k</p>
+              </span>
+              <span class="flex items-center" style={{ marginBottom: "15px" }}>
+                <img src={date} style={{ height: "20x", width: "20px" }} />
+                <p class="mb-0 text-slate-500 px-2">Posted</p>
+                <p class="mb-0">18/12/2022</p>
+              </span>
+              <span class="flex items-center" style={{ marginBottom: "15px" }}>
+                <img src="" style={{ height: "20x", width: "20px" }} />
+                <p class="mb-0 text-slate-500 px-2">Category</p>
+                <p class="mb-0">Service</p>
+              </span>
+            </div>
           </Card>
+
+          <div class="flex">
+            <a class="px-4 mb-0 no-underline text-slate-500">Information</a>
+            <a class="px-4 mb-0 no-underline text-slate-500">
+              Documents Required
+            </a>
+            <a class="px-4 mb-0 no-underline text-slate-500">Eligibility</a>
+          </div>
+          <hr
+            style={{
+              backgroundImage: "linear-gradient(50deg, #E61B1E, #4E47E5)",
+              height: "4px",
+              opacity: "1",
+            }}
+          />
+
+          <Card
+            style={{
+              padding: "20px",
+              width: "100%",
+              marginBottom: "10px",
+              marginLeft: "5px",
+              marginRight: "5px",
+              justifyContent: "center",
+            }}
+          >
+            <Card.Body class="p-2">
+              <div class="flex" style={{ paddingBottom: "18px" }}>
+                <img src="#" style={{ height: "32px", width: "32px" }} />
+                <p
+                  class="mb-0 text-black"
+                  style={{
+                    lineHeight: "30px",
+                    paddingLeft: "9px",
+                    fontSize: "16px",
+                    alignContent: "center",
+                  }}
+                >
+                  Job Description
+                </p>
+              </div>
+              <p class="mb-0 text-left" style={{ fontSize: "15px" }}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
+                commodo pellentesque elementum facilisis gravida. Est proin diam
+                cursus quam purus. Ultrices leo est iaculis elementum tortor
+                nibh. Penatibus varius lorem sapien tincidunt at. Mollis justo,
+                nisi, ultrices nullam odio leo. Molestie leo est lectus placerat
+                cras eget. Diam nisl at sed amet tortor semper.
+              </p>
+              <p class="mb-0 text-left" style={{ fontSize: "15px" }}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
+                commodo pellentesque elementum facilisis gravida. Est proin diam
+                cursus quam purus. Ultrices leo est iaculis elementum tortor
+                nibh. Penatibus varius lorem sapien tincidunt at. Mollis justo,
+                nisi, ultrices nullam odio leo. Molestie leo est lectus placerat
+                cras eget. Diam nisl at sed amet tortor semper.
+              </p>
+              <p class="mb-0 text-left" style={{ fontSize: "15px" }}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
+                commodo pellentesque elementum facilisis gravida. Est proin diam
+                cursus quam purus. Ultrices leo est iaculis elementum tortor
+                nibh. Penatibus varius lorem sapien tincidunt at. Mollis justo,
+                nisi, ultrices nullam odio leo. Molestie leo est lectus placerat
+                cras eget. Diam nisl at sed amet tortor semper.
+              </p>
+            </Card.Body>
+          </Card>
+
+          <h2 class="text-left pl-4">Similar Jobs</h2>
+
           <Carousel responsive={responsive}>
             <div>
               <Card
@@ -1042,8 +1133,8 @@ const Page = () => {
             >
               <Card.Body class="p-2">
                 <div class="oneline pb-2">
-                  <h2 class="float-left text-base">Jobs by Location : </h2>
-                  <div class="text-left">
+                  <h2 class="md:float-left text-base">Jobs by Location : </h2>
+                  <div class="md:text-left">
                     <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
                       Delhi
                     </a>
@@ -1080,8 +1171,8 @@ const Page = () => {
                   </div>
                 </div>
                 <div class="oneline pb-2">
-                  <h2 class="float-left text-base">Jobs by Location : </h2>
-                  <div class="text-left">
+                  <h2 class="md:float-left text-base">Jobs by Location : </h2>
+                  <div class="md:text-left">
                     <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
                       Delhi
                     </a>
@@ -1118,8 +1209,8 @@ const Page = () => {
                   </div>
                 </div>
                 <div class="oneline pb-2">
-                  <h2 class="float-left text-base">Jobs by Location : </h2>
-                  <div class="text-left">
+                  <h2 class="md:float-left text-base">Jobs by Location : </h2>
+                  <div class="md:text-left">
                     <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
                       Delhi
                     </a>
@@ -1156,8 +1247,8 @@ const Page = () => {
                   </div>
                 </div>
                 <div class="oneline pb-2">
-                  <h2 class="float-left text-base">Jobs by Location : </h2>
-                  <div class="text-left">
+                  <h2 class="md:float-left text-base">Jobs by Location : </h2>
+                  <div class="md:text-left">
                     <a class="text-slate-500 text-xs no-underline border-r-2 leading-3 px-2 border-slate-500">
                       Delhi
                     </a>
