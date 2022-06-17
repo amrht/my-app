@@ -1,8 +1,6 @@
 import React from "react";
-import Navigation from "./../components/navbar.js";
 import { Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import icon from "./Icon.svg";
 import bgi from "./bgi2.jpg";
 import elps from "./elps.png";
 import bookmark from "./bookmark.svg";
@@ -30,8 +28,33 @@ const responsive = {
     items: 1,
   },
 };
+window.onload = function(){ 
+  const information = document.getElementById("information");
+  const eligibility = document.getElementById("eligibility");
+  const decription = document.getElementById("description");
+  const btne = document.getElementById("toggle");
+  const btnd = document.getElementById("docb");
+  const btni = document.getElementById("infob");
 
+  btne.onclick = function () {
+    eligibility.style.display = "block";
+    decription.style.display = "none";
+    information.style.display = "none";
+  };
+  btnd.onclick = function () {
+    eligibility.style.display = "none";
+    decription.style.display = "block";
+    information.style.display = "none";
+  };
+  btni.onclick = function () {
+    eligibility.style.display = "none";
+    decription.style.display = "none";
+    information.style.display = "block";
+  };
+};
 const Page = () => {
+
+
   return (
     <div
       className="main-body bg-slate-100 h-full min-w-full"
@@ -363,12 +386,25 @@ const Page = () => {
             </div>
           </Card>
 
-          <div class="flex">
-            <a class="px-4 mb-0 no-underline text-slate-500">Information</a>
-            <a class="px-4 mb-0 no-underline text-slate-500">
+          <div class="md:flex block mt-8">
+            <button
+              id="infob"
+              class="funcbtn px-4 mb-2 no-underline text-slate-500"
+            >
+              Information
+            </button>
+            <button
+              id="docb"
+              class="funcbtn px-4 mb-2 no-underline text-slate-500"
+            >
               Documents Required
-            </a>
-            <a class="px-4 mb-0 no-underline text-slate-500">Eligibility</a>
+            </button>
+            <button
+              id="toggle"
+              class="funcbtn px-4 mb-2 no-underline text-slate-500"
+            >
+              Eligibility
+            </button>
           </div>
           <hr
             style={{
@@ -379,6 +415,7 @@ const Page = () => {
           />
 
           <Card
+            id="information"
             style={{
               padding: "20px",
               width: "100%",
@@ -400,7 +437,85 @@ const Page = () => {
                     alignContent: "center",
                   }}
                 >
+                  Information
+                </p>
+              </div>
+              <p class="mb-0 text-left" style={{ fontSize: "15px" }}>
+                How does Cloudflare Images Work? Cloudflare Images automatically
+                serves the most optimized version of your image. You no longer
+                need to worry about things like file extensions. When a client
+                requests a picture hosted on Cloudflare Images, we automatically
+                identify the ideal supported format at the Cloudflare edge and
+                serve it to the client from the edge.
+              </p>
+            </Card.Body>
+          </Card>
+
+          <Card
+            id="description"
+            style={{
+              padding: "20px",
+              width: "100%",
+              marginBottom: "10px",
+              marginLeft: "5px",
+              marginRight: "5px",
+              justifyContent: "center",
+              display: "none",
+            }}
+          >
+            <Card.Body class="p-2">
+              <div class="flex" style={{ paddingBottom: "18px" }}>
+                <img src="#" style={{ height: "32px", width: "32px" }} />
+                <p
+                  class="mb-0 text-black"
+                  style={{
+                    lineHeight: "30px",
+                    paddingLeft: "9px",
+                    fontSize: "16px",
+                    alignContent: "center",
+                  }}
+                >
                   Job Description
+                </p>
+              </div>
+              <p class="mb-0 text-left" style={{ fontSize: "15px" }}>
+                Hello Everyone, Yesterday I had my weekly meeting for the GSOC
+                project Exerciser Evaluation Mode. Previous Week Task:
+                Completion and Merging of the open PRs and researching the first
+                task regarding upgrading the node packages to the latest
+                version. Tasks for this week: All packages must be upgraded to
+                the latest version, and check if all code runs perfectly after
+                upgrading the packages. Our next meeting is scheduled for 19th
+                June 2022
+              </p>
+            </Card.Body>
+          </Card>
+
+          <Card
+            id="eligibility"
+            style={{
+              padding: "20px",
+              width: "100%",
+              marginBottom: "10px",
+              marginLeft: "5px",
+              marginRight: "5px",
+              justifyContent: "center",
+              display: "none",
+            }}
+          >
+            <Card.Body class="p-2">
+              <div class="flex" style={{ paddingBottom: "18px" }}>
+                <img src="#" style={{ height: "32px", width: "32px" }} />
+                <p
+                  class="mb-0 text-black"
+                  style={{
+                    lineHeight: "30px",
+                    paddingLeft: "9px",
+                    fontSize: "16px",
+                    alignContent: "center",
+                  }}
+                >
+                  Eligibility
                 </p>
               </div>
               <p class="mb-0 text-left" style={{ fontSize: "15px" }}>
@@ -430,7 +545,7 @@ const Page = () => {
             </Card.Body>
           </Card>
 
-          <h2 class="text-left pl-4">Similar Jobs</h2>
+          <h2 class="text-left pl-4 mt-4">Similar Jobs</h2>
 
           <Carousel responsive={responsive}>
             <div>
@@ -1024,103 +1139,6 @@ const Page = () => {
           </Carousel>
 
           <div class="mt-4 w-full overflow-hidden" style={{ margin: "0 auto" }}>
-            <Card
-              style={{
-                borderRadius: "15px",
-                marginBottom: "16px",
-                marginTop: "10px",
-                padding: "5px",
-                width: "225px",
-              }}
-            >
-              <Card.Body>
-                <p class="text-xl text-left mt-2">
-                  House Driver Required in Qatar
-                </p>
-                <div
-                  class="flex"
-                  style={{
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <div className="">
-                    <img className="h-16 w-16 mt-1 float-left" />
-
-                    <p class="text-left mb-0 ml-4 float-right">Tags</p>
-                  </div>
-
-                  <span
-                    class="flex"
-                    style={{
-                      flexDirection: "column",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <a
-                      style={{
-                        marginBottom: "4px",
-                        color: "white",
-                        fontSize: "12px",
-                        padding: "4px",
-                        borderRadius: "4px",
-                        backgroundColor: "#4E47E5",
-                      }}
-                    >
-                      Full Time
-                    </a>
-                    <a
-                      style={{
-                        color: "white",
-                        fontSize: "12px",
-                        padding: "4px",
-                        borderRadius: "4px",
-                        backgroundColor: "#E61B1E",
-                      }}
-                    >
-                      Full Time
-                    </a>
-                  </span>
-                </div>
-                <br />
-                <span
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                  }}
-                >
-                  <span class="flex items-baseline">
-                    <img
-                      src={bookmark}
-                      class="mr-0"
-                      style={{ height: "11px", width: "8px" }}
-                    />
-                    <p class="text-left mb-0" style={{ fontSize: "16px" }}>
-                      999$
-                    </p>
-                  </span>
-                  <button
-                    class="sm:float-right "
-                    style={{
-                      height: "36px",
-                      marginTop: "5px",
-                      marginBottom: "5px",
-                      color: "white",
-                      fontSize: "16px",
-                      lineHeight: "18px",
-                      padding: "4px",
-                      borderRadius: "5px",
-                      backgroundImage:
-                        "linear-gradient(to right, #E61B1E, #4E47E5)",
-                    }}
-                  >
-                    Apply Now
-                  </button>
-                </span>
-              </Card.Body>
-            </Card>
-
             <Card
               style={{
                 padding: "10px",
