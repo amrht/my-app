@@ -2,10 +2,12 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import bgi from "./bgi2.jpg";
-import elps from "./elps.png";
+import elps from "./elps.svg";
 import bookmark from "./bookmark.svg";
 import eye from "./Group.svg";
 import date from "./Date.svg";
+import vector from "./Vector.svg";
+import carbon from "./carbon.svg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -137,7 +139,7 @@ const Page = () => {
                     </p>
                     <p class="text-left text-slate-500">Netflix Technologies</p>
                   </div>
-                  <div class="hidden md:block">
+                  <div class="hidden md:block px-4">
                     <span
                       class="flex items-center"
                       style={{ marginBottom: "15px" }}
@@ -161,7 +163,10 @@ const Page = () => {
                       class="flex items-center"
                       style={{ marginBottom: "15px" }}
                     >
-                      <img src="" style={{ height: "20x", width: "20px" }} />
+                      <img
+                        src={vector}
+                        style={{ height: "20x", width: "20px" }}
+                      />
                       <p class="mb-0 text-slate-500 px-2">Category</p>
                       <p class="mb-0">Service</p>
                     </span>
@@ -172,7 +177,7 @@ const Page = () => {
                     class="tiles m-2 float-left flex"
                     style={{
                       alignItems: "center",
-                      width: "160px",
+                      
                       padding: "4px",
                       borderRadius: "4px",
                       boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
@@ -194,7 +199,7 @@ const Page = () => {
                     class="tiles m-2 float-left flex"
                     style={{
                       alignItems: "center",
-                      width: "160px",
+                      minWidth: "160px",
                       padding: "4px",
                       borderRadius: "4px",
                       boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
@@ -216,7 +221,7 @@ const Page = () => {
                     class="tiles m-2 float-left flex"
                     style={{
                       alignItems: "center",
-                      width: "160px",
+                      minWidth: "160px",
                       padding: "4px",
                       borderRadius: "4px",
                       boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
@@ -238,7 +243,7 @@ const Page = () => {
                     class="tiles m-2 float-left flex"
                     style={{
                       alignItems: "center",
-                      width: "160px",
+                      minWidth: "160px",
                       padding: "4px",
                       borderRadius: "4px",
                       boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
@@ -260,7 +265,7 @@ const Page = () => {
                     class="tiles m-2 float-left flex"
                     style={{
                       alignItems: "center",
-                      width: "160px",
+                      minWidth: "160px",
                       padding: "4px",
                       borderRadius: "4px",
                       boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
@@ -282,7 +287,7 @@ const Page = () => {
                     class="tiles m-2 float-left flex"
                     style={{
                       alignItems: "center",
-                      width: "160px",
+                      minWidth: "160px",
                       padding: "4px",
                       borderRadius: "4px",
                       boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
@@ -304,7 +309,7 @@ const Page = () => {
                     class="tiles m-2 float-left flex"
                     style={{
                       alignItems: "center",
-                      width: "160px",
+                      minWidth: "160px",
                       padding: "4px",
                       borderRadius: "4px",
                       boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
@@ -325,7 +330,7 @@ const Page = () => {
                     class="tiles m-2 float-left flex"
                     style={{
                       alignItems: "center",
-                      width: "160px",
+                      minWidth: "160px",
                       padding: "4px",
                       borderRadius: "4px",
                       boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
@@ -346,7 +351,7 @@ const Page = () => {
                     class="tiles m-2 float-left flex"
                     style={{
                       alignItems: "center",
-                      width: "160px",
+                      minWidth: "160px",
                       padding: "4px",
                       borderRadius: "4px",
                       boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
@@ -379,7 +384,7 @@ const Page = () => {
                 <p class="mb-0">18/12/2022</p>
               </span>
               <span class="flex items-center" style={{ marginBottom: "15px" }}>
-                <img src="" style={{ height: "20x", width: "20px" }} />
+                <img src={vector} style={{ height: "20x", width: "20px" }} />
                 <p class="mb-0 text-slate-500 px-2">Category</p>
                 <p class="mb-0">Service</p>
               </span>
@@ -427,7 +432,7 @@ const Page = () => {
           >
             <Card.Body class="p-2">
               <div class="flex" style={{ paddingBottom: "18px" }}>
-                <img src="#" style={{ height: "32px", width: "32px" }} />
+                <img src={carbon} style={{ height: "32px", width: "32px" }} />
                 <p
                   class="mb-0 text-black"
                   style={{
@@ -465,7 +470,7 @@ const Page = () => {
           >
             <Card.Body class="p-2">
               <div class="flex" style={{ paddingBottom: "18px" }}>
-                <img src="#" style={{ height: "32px", width: "32px" }} />
+                <img src={carbon} style={{ height: "32px", width: "32px" }} />
                 <p
                   class="mb-0 text-black"
                   style={{
@@ -505,7 +510,7 @@ const Page = () => {
           >
             <Card.Body class="p-2">
               <div class="flex" style={{ paddingBottom: "18px" }}>
-                <img src="#" style={{ height: "32px", width: "32px" }} />
+                <img src={carbon} style={{ height: "32px", width: "32px" }} />
                 <p
                   class="mb-0 text-black"
                   style={{
@@ -1326,8 +1331,8 @@ const Page = () => {
 
               <p class="text-left text-white label-input100 mb-0 mt-2">Name</p>
               <input
-                class="input100 mb-0 h-8 rounded w-full margin10"
-                style={{ paddingLeft: "5px" }}
+                class="input100 mb-0 h-8 w-full margin10"
+                style={{ paddingLeft: "10px", borderRadius: "20px" }}
                 type="text"
                 name="name"
                 placeholder="Name"
@@ -1337,8 +1342,8 @@ const Page = () => {
                 Your Mobile
               </p>
               <input
-                class="input100 rounded mb-0 h-8 w-full"
-                style={{ paddingLeft: "5px" }}
+                class="input100 mb-0 h-8 w-full"
+                style={{ paddingLeft: "10px", borderRadius: "20px" }}
                 type="text"
                 name="Mobile"
                 placeholder="Mobile"
@@ -1346,8 +1351,8 @@ const Page = () => {
               <br />
               <p class="text-left text-white label-input100 mb-0 mt-2">Email</p>
               <input
-                class="rounded input100 mb-0 h-8 w-full"
-                style={{ paddingLeft: "5px" }}
+                class=" input100 mb-0 h-8 w-full"
+                style={{ paddingLeft: "10px", borderRadius: "20px" }}
                 type="text"
                 name="email"
                 placeholder="Email"
@@ -1357,15 +1362,15 @@ const Page = () => {
                 Message
               </p>
               <input
-                class="rounded input100 mb-0 h-8 w-full"
-                style={{ paddingLeft: "5px" }}
+                class=" input100 mb-0 h-8 w-full"
+                style={{ paddingLeft: "10px", borderRadius: "20px" }}
                 type="text"
                 name="Message"
                 placeholder="Message"
               />
               <br />
               <br />
-              <button class="bg-white text-black py-2 px-4 float-left rounded">
+              <button class="bg-white text-black py-2 px-4 float-left" style={{borderRadius:'20px'}}>
                 Button
               </button>
             </Card.Body>
