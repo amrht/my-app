@@ -13,7 +13,8 @@ function App() {
     <div className="App">
       <Navigation sticky="top" />
       <Switch>
-        <Route path="/" component={Page} />
+        <Route exact path='/' component={Page3}/>
+        <Route path='/Page/:id' component={Page}/>
         <Route path="/*" component={P404} />
       </Switch>
     </div>
