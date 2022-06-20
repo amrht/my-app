@@ -10,6 +10,9 @@ import vector from "./Vector.svg";
 import carbon from "./carbon.svg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import useFetch from '../useFetch';
+import {useParams} from 'react-router-dom'
+import {useEffect} from "react";
 
 const responsive = {
   superLargeDesktop: {
@@ -55,10 +58,19 @@ window.onload = function(){
   };
 };
 const Page = () => {
-
+  const{id}=useParams();
+  const {data:jobs,isPending,error}=useFetch("http://jazeera-travels.herokuapp.com/api/jobs/"+id);
+  {jobs&&console.log(jobs)}
+  useEffect(()=> {
+    if (!jobs){console.log(jobs)}
+  },[jobs])
 
   return (
-    <div
+    <div>
+
+    { !jobs&& <div>Loading </div> }
+
+    { jobs&& <div
       className="main-body bg-slate-100 h-full min-w-full"
       style={{ fontFamily: "Poppins" }}
     >
@@ -135,9 +147,9 @@ const Page = () => {
                   </div>
                   <div class="float-right pl-2 pr-4 w-full">
                     <p class="text-2xl text-left mb-0">
-                      House Driver Required in Qatar
+                    {jobs.data.attributes.jobTitle}
                     </p>
-                    <p class="text-left text-slate-500">Netflix Technologies</p>
+                    <p class="text-left text-slate-500">{jobs.data.attributes.companyName}</p>
                   </div>
                   <div class="hidden md:block px-4">
                     <span
@@ -146,7 +158,7 @@ const Page = () => {
                     >
                       <img src={eye} style={{ height: "20x", width: "20px" }} />
                       <p class="mb-0 text-slate-500 px-2">Views</p>
-                      <p class="mb-0">88.8k</p>
+                      <p class="mb-0">2.1k</p>
                     </span>
                     <span
                       class="flex items-center"
@@ -185,7 +197,7 @@ const Page = () => {
                   >
                     <img src={elps} style={{ height: "38px", width: "38px" }} />
                     <div class="p-2 text-left">
-                      <p class="text-2xl mb-0">105</p>
+                      <p class="text-2xl mb-0">{jobs.data.attributes.noOfVacancy}</p>
                       <p
                         class="text-sm text-slate-500 mb-0"
                         style={{ marginTop: "-8px" }}
@@ -207,12 +219,12 @@ const Page = () => {
                   >
                     <img src={elps} style={{ height: "38px", width: "38px" }} />
                     <div class="p-2 text-left">
-                      <p class="text-2xl mb-0">105</p>
+                      <p class="text-2xl mb-0">{jobs.data.attributes.experience}</p>
                       <p
                         class="text-sm text-slate-500 mb-0"
                         style={{ marginTop: "-8px" }}
                       >
-                        Vacancies
+                        Experience
                       </p>
                     </div>
                   </div>
@@ -229,12 +241,12 @@ const Page = () => {
                   >
                     <img src={elps} style={{ height: "38px", width: "38px" }} />
                     <div class="p-2 text-left">
-                      <p class="text-2xl mb-0">105</p>
+                      <p class="text-2xl mb-0">{jobs.data.attributes.ageLimit}</p>
                       <p
                         class="text-sm text-slate-500 mb-0"
                         style={{ marginTop: "-8px" }}
                       >
-                        Vacancies
+                       Age Limit
                       </p>
                     </div>
                   </div>
@@ -251,12 +263,12 @@ const Page = () => {
                   >
                     <img src={elps} style={{ height: "38px", width: "38px" }} />
                     <div class="p-2 text-left">
-                      <p class="text-2xl mb-0">105</p>
+                      <p class="text-2xl mb-0">{jobs.data.attributes.timings}</p>
                       <p
                         class="text-sm text-slate-500 mb-0"
                         style={{ marginTop: "-8px" }}
                       >
-                        Vacancies
+                        Timing
                       </p>
                     </div>
                   </div>
@@ -273,12 +285,12 @@ const Page = () => {
                   >
                     <img src={elps} style={{ height: "38px", width: "38px" }} />
                     <div class="p-2 text-left">
-                      <p class="text-2xl mb-0">105</p>
+                      <p class="text-2xl mb-0">{jobs.data.attributes.industry}</p>
                       <p
                         class="text-sm text-slate-500 mb-0"
                         style={{ marginTop: "-8px" }}
                       >
-                        Vacancies
+                        Industry
                       </p>
                     </div>
                   </div>
@@ -295,12 +307,12 @@ const Page = () => {
                   >
                     <img src={elps} style={{ height: "38px", width: "38px" }} />
                     <div class="p-2 text-left">
-                      <p class="text-2xl mb-0">105</p>
+                      <p class="text-2xl mb-0">{jobs.data.attributes.nationality}</p>
                       <p
                         class="text-sm text-slate-500 mb-0"
                         style={{ marginTop: "-8px" }}
                       >
-                        Vacancies
+                        Nationality
                       </p>
                     </div>
                   </div>
@@ -317,57 +329,17 @@ const Page = () => {
                   >
                     <img src={elps} style={{ height: "38px", width: "38px" }} />
                     <div class="p-2 text-left">
-                      <p class="text-2xl mb-0">105</p>
+                      <p class="text-2xl mb-0">{jobs.data.attributes.gender}</p>
                       <p
                         class="text-sm text-slate-500 mb-0"
                         style={{ marginTop: "-8px" }}
                       >
-                        Vacancies
+                        Gender
                       </p>
                     </div>
                   </div>
-                  <div
-                    class="tiles m-2 float-left flex"
-                    style={{
-                      alignItems: "center",
-                      minWidth: "160px",
-                      padding: "4px",
-                      borderRadius: "4px",
-                      boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
-                    }}
-                  >
-                    <img src={elps} style={{ height: "38px", width: "38px" }} />
-                    <div class="p-2 text-left">
-                      <p class="text-2xl mb-0">105</p>
-                      <p
-                        class="text-sm text-slate-500 mb-0"
-                        style={{ marginTop: "-8px" }}
-                      >
-                        Vacancies
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class="tiles m-2 float-left flex"
-                    style={{
-                      alignItems: "center",
-                      minWidth: "160px",
-                      padding: "4px",
-                      borderRadius: "4px",
-                      boxShadow: "0px 0px 20px 0px rgba(194, 194, 194, 0.25)",
-                    }}
-                  >
-                    <img src={elps} style={{ height: "38px", width: "38px" }} />
-                    <div class="p-2 text-left">
-                      <p class="text-2xl mb-0">105</p>
-                      <p
-                        class="text-sm text-slate-500 mb-0"
-                        style={{ marginTop: "-8px" }}
-                      >
-                        Vacancies
-                      </p>
-                    </div>
-                  </div>
+                  
+                  
                 </div>
               </div>
             </div>
@@ -446,12 +418,7 @@ const Page = () => {
                 </p>
               </div>
               <p class="mb-0 text-left" style={{ fontSize: "15px" }}>
-                How does Cloudflare Images Work? Cloudflare Images automatically
-                serves the most optimized version of your image. You no longer
-                need to worry about things like file extensions. When a client
-                requests a picture hosted on Cloudflare Images, we automatically
-                identify the ideal supported format at the Cloudflare edge and
-                serve it to the client from the edge.
+              {jobs.data.attributes.jobDescription}
               </p>
             </Card.Body>
           </Card>
@@ -484,14 +451,7 @@ const Page = () => {
                 </p>
               </div>
               <p class="mb-0 text-left" style={{ fontSize: "15px" }}>
-                Hello Everyone, Yesterday I had my weekly meeting for the GSOC
-                project Exerciser Evaluation Mode. Previous Week Task:
-                Completion and Merging of the open PRs and researching the first
-                task regarding upgrading the node packages to the latest
-                version. Tasks for this week: All packages must be upgraded to
-                the latest version, and check if all code runs perfectly after
-                upgrading the packages. Our next meeting is scheduled for 19th
-                June 2022
+              {jobs.data.attributes.jobDescription}
               </p>
             </Card.Body>
           </Card>
@@ -524,28 +484,7 @@ const Page = () => {
                 </p>
               </div>
               <p class="mb-0 text-left" style={{ fontSize: "15px" }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
-                commodo pellentesque elementum facilisis gravida. Est proin diam
-                cursus quam purus. Ultrices leo est iaculis elementum tortor
-                nibh. Penatibus varius lorem sapien tincidunt at. Mollis justo,
-                nisi, ultrices nullam odio leo. Molestie leo est lectus placerat
-                cras eget. Diam nisl at sed amet tortor semper.
-              </p>
-              <p class="mb-0 text-left" style={{ fontSize: "15px" }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
-                commodo pellentesque elementum facilisis gravida. Est proin diam
-                cursus quam purus. Ultrices leo est iaculis elementum tortor
-                nibh. Penatibus varius lorem sapien tincidunt at. Mollis justo,
-                nisi, ultrices nullam odio leo. Molestie leo est lectus placerat
-                cras eget. Diam nisl at sed amet tortor semper.
-              </p>
-              <p class="mb-0 text-left" style={{ fontSize: "15px" }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
-                commodo pellentesque elementum facilisis gravida. Est proin diam
-                cursus quam purus. Ultrices leo est iaculis elementum tortor
-                nibh. Penatibus varius lorem sapien tincidunt at. Mollis justo,
-                nisi, ultrices nullam odio leo. Molestie leo est lectus placerat
-                cras eget. Diam nisl at sed amet tortor semper.
+              {jobs.data.attributes.requiredDocuments}
               </p>
             </Card.Body>
           </Card>
@@ -1377,6 +1316,9 @@ const Page = () => {
           </Card>
         </div>
       </div>
+    </div>
+  }
+
     </div>
   );
 };

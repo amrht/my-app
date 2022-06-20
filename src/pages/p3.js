@@ -257,11 +257,12 @@ const Page3 = () => {
               <p class="sm:text-right text-left text-2xl mb-0">{job.attributes.sallery}$</p>
               <span class="float-left">
               <a style={{marginRight:'4px',align:'left', color:'white',fontSize:'12px',padding:'4px' ,borderRadius:'2px' ,backgroundColor: '#4E47E5'}}>Full Time</a>
-              <a style={{marginRight:'4px', color:'white',fontSize:'12px',padding:'4px' ,borderRadius:'2px' ,backgroundColor: '#E61B1E'}}>Full Time</a>
+              <a style={{marginRight:'4px', color:'white',fontSize:'12px',padding:'4px' ,borderRadius:'2px' ,backgroundColor: '#E61B1E'}}>{job.attributes.Tags.map(Tag=><span key={Tag.id}> {Tag.tag}</span>)}</a>
               </span>
               <br/>
+			  <Link to={`/Page/${job.id}`}>
               <button class="sm:float-right float-left" style={{height:'36px', marginTop:'5px' ,marginBottom:'5px' , color:'white',fontSize:'16px', lineHeight:'18px' , padding:'4px' ,borderRadius:'5px' , backgroundImage: 'linear-gradient(to right, #E61B1E, #4E47E5)'}}>Apply Now</button>
-
+			  </Link>
             </div>
 
           </Card.Body>
